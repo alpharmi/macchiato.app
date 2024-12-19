@@ -20,8 +20,10 @@
                 <div class="flex flex-col gap-2">
                     <p class="text-xl">Open Windows Powershell and run the following command.</p>
                     <div class="flex gap-2 bg-text p-2 mr-5">
-                        <svg v-if="!copied" viewBox="0 0 24 24" class="w-5 h-5 fill-main pt-1"><path id="copySvg" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg>
-                        <svg v-if="copied" viewBox="0 0 24 24" class="w-5 h-5 fill-main pt-1"><path id="copySvg" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path></svg>
+                        <button @click="copyToClipboard" class="w-5 h-5">
+                            <svg v-if="!copied" viewBox="0 0 24 24" class="w-full h-full fill-main pt-1"><path id="copySvg" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg>
+                            <svg v-if="copied" viewBox="0 0 24 24" class="w-full h-full fill-main pt-1"><path id="copySvg" d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"></path></svg>
+                        </button>
                         <p class="text-md text-main">{{ importCommand }}</p>
                     </div>
                     <a href="https://github.com/alpharmi/macchia.to/blob/main/import.ps1" class="mb-3 text-sm">GitHub</a>
@@ -61,6 +63,14 @@
                 this.$router.push({
                     path: route
                 })
+            },
+            copyToClipboard() {
+                navigator.clipboard.writeText(this.importCommand)
+
+                this.copied = true
+                setInterval(() => {
+                    this.copied = false
+                }, 1000)
             },
             error(message) {
                 setTimeout(() => {

@@ -1,4 +1,6 @@
 <template>
+  <Analytics/>
+
   <header class="h-14 bg-[#00000020] backdrop-blur-lg drop-shadow-md flex items-center pl-10 gap-1">
     <img @click="redirect('/')" class="logo h-3/5" src="/logo.webp">
     <p class="text-2xl"><span class="text-description">{{ currentRoute() }}</span></p>
@@ -13,6 +15,10 @@
     <p>Girls' Frontline 2: Exilium and content are trademarks and copyright of SUNBORN Information or MicaTeam.</p>
   </footer>
 </template>
+
+<script setup>
+  import { Analytics } from '@vercel/analytics/vue';
+</script>
 
 <script>
   export default {
