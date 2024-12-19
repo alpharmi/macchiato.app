@@ -1,0 +1,9 @@
+{
+    "banners": [
+        {"name": "suomi", "id": 3, "type": "character"},
+        {"name": "unspoken_calling", "id": 4, "type": "weapon"},
+        {"name": "ullrid", "type": "character"},
+        {"name": "rectrix", "type": "weapon"},
+        {"name": "standard", "id": 1, "type": "standard"}
+    ]
+}

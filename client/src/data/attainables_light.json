@@ -1,0 +1,524 @@
+[
+    { 
+        "name": "suomi",
+        "id": 1039,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "smg",
+        "role": "support",
+        "roleDescriptions": ["heal_&_stability_regen", "shield"]
+    },
+    {
+        "name": "ullrid",
+        "id": 1037,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "bld",
+        "role": "vanguard",
+        "roleDescriptions": ["melee_damage", "combo_attack", "stealth"]
+    },
+    {
+        "name": "mosin-nagant",
+        "id": 1033,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "rf",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_burst", "assist", "control"]
+    },
+    {
+        "name": "peritya",
+        "id": 1021,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "mg",
+        "role": "sentinel",
+        "roleDescriptions": ["wide_area", "team_support", "displacement"]  
+    },
+    {
+        "name": "qiongjiu",
+        "id": 1027,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "sentinel",
+        "roleDescriptions": ["sustained_damage", "assist"]
+    },
+    {
+        "name": "sabrina",
+        "id": 1029,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "sg",
+        "role": "bulwark",
+        "roleDescriptions": ["stability_defence", "counterattack", "tile"]
+    },
+    {
+        "name": "vepley",
+        "id": 1015,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "sg",
+        "role": "vanguard",
+        "roleDescriptions": ["mixed_damage", "debuff", "displacement"]
+    },
+    {
+        "name": "tololo",
+        "id": 1025,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_burst", "extra_action"]
+    },
+    {
+        "name": "cheeta",
+        "id": 1024,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "smg",
+        "role": "support",
+        "roleDescriptions": ["random_buff", "assist", "heal"]
+    },
+    {
+        "name": "colphne",
+        "id": 1009,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "hg",
+        "role": "support",
+        "roleDescriptions": ["heal_&_stability_regen", "assist"]
+    },
+    {
+        "name": "groza",
+        "id": 1017,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "ar",
+        "role": "bulwark",
+        "roleDescriptions": ["stability_defence", "counterattack"]
+    },
+    {
+        "name": "krolik",
+        "id": 1001,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "bld",
+        "role": "vanguard",
+        "roleDescriptions": ["melee_damage", "debuff"]
+    },
+    {
+        "name": "ksenia",
+        "id": 1036,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "hg",
+        "role": "support",
+        "roleDescriptions": ["heal_&_stability_regen", "buff"]
+    },
+    {
+        "name": "littara",
+        "id": 1038,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "mg",
+        "role": "sentinel",
+        "roleDescriptions": ["aoe_damage", "pursuit"]
+    },
+    {
+        "name": "lotta",
+        "id": 1041,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "sg",
+        "role": "sentinel",
+        "roleDescriptions": ["aoe_damage", "debuff", "assist"]
+    },
+    {
+        "name": "nagant",
+        "id": 1026,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "hg",
+        "role": "support",
+        "roleDescriptions": ["single_target_debuff", "pursuit"]
+    },
+    {
+        "name": "nemesis",
+        "id": 1008,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "rf",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_damage", "assist"]
+    },
+    {
+        "name": "sharkry",
+        "id": 1022,
+        "item": "character",
+        "rarity": "sr",
+        "weapon": "ar",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_damage", "debuff"]
+    },
+    {
+        "name": "unspoken_calling",
+        "id": 10393,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "smg"
+    },
+    {
+        "name": "rectrix",
+        "id": 10373,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "bld"
+    },
+    {
+        "name": "arcana",
+        "id": 10003,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "rf"
+    },
+    {
+        "name": "classified_manuscript",
+        "id": 10002,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "smg"
+    },
+    {
+        "name": "crowned_jackelope",
+        "id": 10005,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "bld"
+    },
+    {
+        "name": "expeditionary_pigeon",
+        "id": 10007,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "sg"
+    },
+    {
+        "name": "golden_melody",
+        "id": 11044,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
+    },
+    {
+        "name": "guerno",
+        "id": 10004,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
+    },
+    {
+        "name": "heart_seeker",
+        "id": 11016,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "sg"
+    },
+    {
+        "name": "mezzaluna",
+        "id": 11047,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "sg"
+    },
+    {
+        "name": "mjolnir",
+        "displayName": "Mjölnir",
+        "id": 10006,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "mg"
+    },
+    {
+        "name": "optical_illusion",
+        "id": 11020,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "mg"
+    },
+    {
+        "name": "papa-figo",
+        "id": 10001,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "hg"
+    },
+    {
+        "name": "planeta",
+        "id": 11038,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
+    },
+    {
+        "name": "samosek",
+        "id": 10333,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "rf"
+    },
+    {
+        "name": ".380_curva",
+        "id": 11015,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "hg"
+    },
+    {
+        "name": ".50_nemesis",
+        "id": 11014,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "rf"
+    },
+    {
+        "name": "hare",
+        "id": 11007,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "bld"
+    },
+    {
+        "name": "m1_super_90",
+        "id": 10412,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "sg"
+    },
+    {
+        "name": "mp7h1",
+        "displayName": "MP7H1",
+        "id": 11040,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "smg"
+    },
+    {
+        "name": "model_arm",
+        "displayName": "Model ARM",
+        "id": 10382,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "mg"
+    },
+    {
+        "name": "model_alpha",
+        "id": 11037,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
+        "name": "nagant_m1895",
+        "id": 11049,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "hg"
+    },
+    {
+        "name": "ots-14",
+        "displayName": "OTs-14",
+        "id": 11023,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
+        "name": "pecheneg-sp",
+        "displayName": "Pecheneg-SP",
+        "id": 11026,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "mg"
+    },
+    {
+        "name": "pluma_edge",
+        "id": 10372,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "bld"
+    },
+    {
+        "name": "qbz-191",
+        "displayName": "QBZ-191",
+        "id": 11043,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
+        "name": "robinson_modular_rifle",
+        "id": 11031,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
+        "name": "sportivo_calibro_12",
+        "id": 11046,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "sg"
+    },
+    {
+        "name": "stechkin",
+        "id": 10362,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "hg"
+    },
+    {
+        "name": "suomi",
+        "id": 10392,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "smg"
+    },
+    {
+        "name": "three-line_rifle_m1891",
+        "id": 10332,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "rf"
+    },
+    {
+        "name": "vepr-12",
+        "id": 11021,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "sg"
+    },
+    {
+        "name": "retired_sportivo_calibro_12",
+        "id": 11045,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "sg"
+    },
+    {
+        "name": "retired_.380_curva",
+        "id": 11008,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "hg"
+    },
+    {
+        "name": "retired_robinson_modular_rifle",
+        "id": 11030,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_suomi",
+        "id": 10391,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "smg"
+    },
+    {
+        "name": "retired_ots-14",
+        "displayName": "Retired OTs-14",
+        "id": 11010,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_mp7h1",
+        "displayName": "Retired MP7H1",
+        "id": 11039,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "smg"
+    },
+    {
+        "name": "retired_three-line_rifle_m1891",
+        "id": 10331,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "rf"
+    },
+    {
+        "name": "retired_.50_nemesis",
+        "id": 11009,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "rf"
+    },
+    {
+        "name": "retired_vepr-12",
+        "id": 11017,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "sg"
+    },
+    {
+        "name": "retired_pecheneg-sp",
+        "displayName": "Retired Pecheneg-SP",
+        "id": 11024,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "mg"
+    },
+    {
+        "name": "retired_model_alpha",
+        "id": 11036,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_nagant_m1895",
+        "id": 11048,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "hg"
+    },
+    {
+        "name": "retired_model_arm",
+        "displayName": "Retired Model ARM",
+        "id": 10381,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "mg"
+    },
+    {
+        "name": "retired_stechkin",
+        "id": 10361,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "hg"
+    },
+    {
+        "name": "retired_qbz-191",
+        "displayName": "Retired QBZ-191",
+        "id": 11042,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_hare",
+        "id": 11022,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "bld"
+    },
+    {
+        "name": "retired_m1_super_90",
+        "id": 10411,
+        "item": "weapon",
+        "type": "sg"
+    }
+]

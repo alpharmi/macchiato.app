@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;400;700;900&display=swap');
+
+@font-face {
+    font-family: "Harmony Sans", sans-serif;
+    font-weight: bold;
+    src: url("HarmonyOS_Sans_Bold.tff");
+}
+@font-face {
+    font-family: "Harmony Sans", sans-serif;
+    font-weight: 900;
+    src: url("HarmonyOS_Sans_Black.tff");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main: #111111;
+    --main-light: #1b1b1b;
+    --secondary: #4b1523;
+    --highlight: #d8b77e;
+    --text: #edf2f7;
+    --description: #aaaaaa;
+
+    --ssr: #ffc75f;
+    --sr: #ffabfc; 
+    --r: #b9c6ff;
+}
+
+html {
+    color-scheme: light dark;
+    overflow-x: hidden;
+    color: var(--text);
+    font-family: "Noto Sans", sans-serif;
+    background-image: url("/background_repeat.webp");
+    background-size: cover;
+    background-position: top;
+    height: auto;
+}
+
+.main-container {
+    border-image: url("/main_container_border.webp") 10 / 1px / 3px repeat;
+    background-color: var(--main);
+}
+
+.button {
+    background-color: var(--secondary);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+    z-index: 10;
+    transition: filter 0.3s;
+    position: relative;
+}
+.button::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+    width: 100%;
+    height: 80%;
+    border-right: 3px solid var(--secondary);
+    transition: all 0.3s;
+    filter: brightness(150%);
+    content: '';
+}
+.button:hover {
+    filter: brightness(120%);
+}
+.button:hover::after {
+    filter: brightness(300%);
+    transition: all 0.3s;
+    height: 50%;
+}
+
+.selectable {
+    position: relative;
+    outline: 2px solid #ffffff50;
+    outline-offset: -2px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.9rem;
+}
+.selectable::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
+    width: 100%;
+    height: 80%;
+    border-right: 3px solid #00000042;
+    transition: all 0.3s;
+    content: '';
+}
+.selectable:hover::after {
+    border-right: 3px solid #0000009d;
+    transition: all 0.3s;
+    height: 50%;
+}
+
+.input {
+    background-color: #030303;
+    height: 2.5rem;
+    outline: none;
+    padding-left: 1rem; 
+}
+.input::placeholder {
+    color: var(--description);
+}
+
+a {
+    color: var(--highlight);
+    width: max-content;
+    padding-bottom: 1px;
+}
+
+a:hover {
+    border-bottom: 1px var(--highlight) solid;
+    padding-bottom: 0px;
+}
+
+.inline-image {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.inline-image > img {
+    height: 1.3em;
+}
+
+.gradient-ssr {
+    background: linear-gradient(180deg, #ffc75f 0%, #ffd17c 100%);
+}
+.gradient-sr {
+    background: linear-gradient(180deg, #ff9dfc 0%, #ff91fb 100%);
+}
+.gradient-r {
+    background: linear-gradient(180deg, #b9c6ff 0%, #a8b8ff 100%);
+}
+
+.pull-ssr {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 1%, #ffd17c33 20%, rgba(0, 0, 0, 0) 99%);
+}
+.pull-sr {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 1%, #ffabfc33 20%, rgba(0, 0, 0, 0) 99%);
+}
+.pull-r {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 1%, #00000080 20%, rgba(0, 0, 0, 0) 99%);
+}
+
+.pull-weapon {
+    object-fit: contain;
+    transform: rotateZ(45deg) scale(1.4);
+}
+
+@keyframes gacha-main {
+    0% { transform: translateX(-2%); opacity: 0%; }
+    10% { transform: translateX(-2%); opacity: 0%; }
+    100% { transform: translateX(0%); opacity: 100%; }
+}
+
+.gacha-main {
+    transform: translateX(0%);
+    opacity: 100%;
+    transition: all 1s;
+}
+
+body:has(.banner:focus) .gacha-main {
+    animation: gacha-main 1s;
+}
+
+@keyframes logo {
+    10% { transform: translateX(3%) rotateZ(1deg); }
+    15% { transform: translateX(8%) rotateZ(5deg); }
+    50% { transform: translateX(0%); }
+}
+
+.logo:hover {
+    animation: logo 3s;
+}
+
+@keyframes debris {
+    0% { transform: translateX(50%) translateY(0%) scale(1); filter: brightness(50%); }
+    10% { transform: translateX(55%) translateY(-5%) scale(1.3); filter: brightness(150%); }
+    100% { transform: translateX(55%) translateY(-5%) scale(1.4); }
+}
+
+.splash {
+    position: absolute;
+    height: 30rem;
+    right: 50%;
+    bottom: 5rem;
+    transform: translateX(55%) translateY(-5%);
+    opacity: 80%;
+    transition: all 1s;
+}
+
+.debris {
+    position: absolute;
+    height: 30rem;
+    right: 50%;
+    bottom: 5rem;
+    transform: translateX(55%) translateY(-5%) scale(1.4) ;
+    filter: brightness(150%);
+    opacity: 50%;
+    animation: debris 10s;
+}
+
+@starting-style {
+    .splash {
+        transform: translateX(50%) translateY(0%);
+        opacity: 20%;
+    }
+    .gacha-main {
+        transform: translateX(-2%);
+        opacity: 0%
+    }
+}
