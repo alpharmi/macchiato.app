@@ -2,7 +2,7 @@
   <Analytics/>
 
   <header class="h-14 bg-[#00000020] backdrop-blur-lg drop-shadow-md flex items-center pl-10 gap-1">
-    <img @click="redirect('/')" class="logo h-3/5" src="/logo.webp">
+    <img @click="redirect('/')" class="logo h-3/5" src="/logo.webp" alt="logo">
     <p class="text-2xl"><span class="text-description">{{ currentRoute() }}</span></p>
   </header>
 

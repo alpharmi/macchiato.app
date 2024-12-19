@@ -10,14 +10,14 @@
         <div class="flex flex-col gap-5">
             <div class="main-container w-[28rem] h-[9rem] flex flex-col p-2 relative pt-8 gap-1">
                 <p>Import your Pull History to view your latest and previous pulls for Characters and Weapons on all banners.</p>
-                <button @click="redirect('/gacha')" class="button w-max inline-image"><img src="/items/targeted_access_permission.webp"> Gacha Tracker</button>
+                <button @click="redirect('/gacha')" class="button w-max inline-image"><img src="/items/targeted_access_permission.webp" alt="item"> Gacha Tracker</button>
                 <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">GACHA</p>
             </div>
         </div>
     </div>
 
-    <img class="debris" src="/debris.webp">
-    <img class="splash" src="/splash.webp">
+    <img class="debris" src="/debris.webp" alt="debris">
+    <img class="splash" src="/splash.webp" alt="macchiato render">
 </template>
 
 <script>
