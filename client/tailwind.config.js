@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       "md": {"max": "1300px"},
-      "sm": {"max": "900px"},
+      "sm": {"max": "700px"},
     },
     fontFamily: {
       "harmony": ["Harmony Sans", "sans-serif"]

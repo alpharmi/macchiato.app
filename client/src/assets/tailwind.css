@@ -39,6 +39,11 @@ html {
     height: auto;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .main-container {
     border-image: url("/main_container_border.webp") 10 / 1px / 3px repeat;
     background-color: var(--main);
@@ -193,19 +198,23 @@ body:has(.banner:focus) .gacha-main {
 
 .splash {
     position: absolute;
+    width: 100%;
+    top: 0;
+    object-fit: contain;
     height: 30rem;
     right: 50%;
-    bottom: 5rem;
-    transform: translateX(55%) translateY(-5%);
+    transform: translateX(52%) translateY(-5%);
     opacity: 80%;
     transition: all 1s;
 }
 
 .debris {
     position: absolute;
+    height: 100%;
+    object-fit: contain;
+    top: 0;
     height: 30rem;
     right: 50%;
-    bottom: 5rem;
     transform: translateX(55%) translateY(-5%) scale(1.4) ;
     filter: brightness(150%);
     opacity: 50%;

@@ -6,7 +6,7 @@
     <p class="text-2xl"><span class="text-description">{{ currentRoute() }}</span></p>
   </header>
 
-  <main class="w-full h-max p-12 min-h-[calc(100vh-3.5rem)]">
+  <main class="w-full h-max p-12 sm:p-0 min-h-[calc(100vh-3.5rem)]">
     <RouterView/>
   </main>
 
