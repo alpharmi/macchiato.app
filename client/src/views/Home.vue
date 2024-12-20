@@ -1,6 +1,6 @@
 <template>
     <div class="relative flex h-auto flex-col mb-20">
-        <div class="w-full h-full flex flex-wrap justify-center gap-5 mb-32 sm:-mb-10">
+        <div class="w-full h-full flex flex-wrap justify-center gap-5 mb-32 sm:-mb-10 fade-in">
             <div class="flex flex-col gap-5">
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Welcome</p>

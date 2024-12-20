@@ -161,6 +161,12 @@ a:hover {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 1%, #00000080 20%, rgba(0, 0, 0, 0) 99%);
 }
 
+.fade-in {
+    transform: translateY(0%);
+    opacity: 100%;
+    transition: all 1s;
+}
+
 .pull-weapon {
     object-fit: contain;
     transform: rotateZ(45deg) scale(1.4);
@@ -231,5 +237,9 @@ body:has(.banner:focus) .gacha-main {
     .gacha-main {
         transform: translateX(-2%);
         opacity: 0%
+    }
+    .fade-in {
+        transform: translateY(10%);
+        opacity: 20%
     }
 }

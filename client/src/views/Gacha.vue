@@ -1,7 +1,7 @@
 <template>
     <Hint message="This page has yet to be optimised to all screen sizes.,This page still has features in progress, stay tuned."/>
 
-    <div class="w-full h-full flex px-40 pt-5">
+    <div class="w-full h-full flex justify-center pt-10 gap-14">
         <div class="w-40 flex flex-col gap-2">
             <button @click="updateBanner(banner)" v-for="banner of banners" :class="(banner.name == bannerFocused.name) ? 'scale-110 translate-x-2 hover:scale-[1.12] hover:translate-x-2.5': 'hover:scale-105 hover:translate-x-1'" class="banner min-w-40 w-full h-20 relative group transition-transform">
                 <div :class="(banner.name == bannerFocused.name) ? 'overflow-hidden': ''" class="absolute w-full bottom-0 h-[81%] rounded-md">
@@ -11,20 +11,22 @@
             </button>
         </div>
 
-        <div class="w-0.5 h-full from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-20 mr-14"/>
+        <div class="min-w-0.5 h-auto from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-2"/>
 
-        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main pt-5 flex flex-col gap-10 w-full">
+        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max">
             <div class="flex gap-3 items-center justify-between w-full">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 flex-wrap">
                     <p class="text-5xl font-black font-harmony-sans capitalize">{{ bannerFocused.name.replaceAll("_", " ") }}</p>
-                    <p v-if="labels" class="bg-main-light text-xl text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
-                    <p v-if="labels" class="bg-main-light text-xl text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
+                    <div class="flex gap-3">
+                        <p v-if="labels" class="bg-main-light text-xl text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
+                        <p v-if="labels" class="bg-main-light text-xl text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
+                    </div>
                 </div>
                 <button @click="redirect('/gacha/import')" class="button w-44">Import Pulls</button>
             </div>
 
-            <div class="flex gap-12">
-                <div class="w-[19rem] h-[17.5rem] flex flex-col gap-5">
+            <div class="flex flex-wrap gap-12">
+                <div class="min-w-[19rem] h-[17.5rem] flex flex-col gap-5">
                     <div class="main-container h-20 relative">
                         <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Lifetime Pulls</p>
                         <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].total }}</p>
@@ -47,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="main-container h-auto w-[38rem] ox">
+                <div class="main-container h-auto min-w-[38rem] ox">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Pull History</p>
 
                     <div class="px-5 flex-col w-full flex justify-center items-center">
