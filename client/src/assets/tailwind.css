@@ -228,10 +228,6 @@ body:has(.banner:focus) .gacha-main {
         transform: translateX(50%) translateY(0%);
         opacity: 20%;
     }
-    .debris {
-        transform: translateX(50%) translateY(0%);
-        filter: brightness(50%);
-    }
     .gacha-main {
         transform: translateX(-2%);
         opacity: 0%
