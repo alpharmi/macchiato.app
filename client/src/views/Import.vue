@@ -182,7 +182,7 @@
                                     var itteration = 1
 
                                     while (true) {
-                                        this.loading = `Importing ${this.capitalise(banner.name)} banner [${itteration}]...`
+                                        this.loading = `Importing ${this.capitalise(banner.name.replaceAll("_", " "))} banner [${itteration}]...`
 
                                         const response = await this.requestGacha(gachaData.gachaRecordUrl, banner.id, headers, next)
 
