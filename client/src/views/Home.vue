@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="relative h-96">
+        <div class="relative h-96 -z-10">
             <img class="debris" src="/debris.webp" alt="debris">
             <img class="splash" src="/splash.webp" alt="macchiato render">
         </div>

@@ -193,8 +193,8 @@
 
                                             break
                                         } else {
-                                            if (!gacha.banners[banner.type]) {
-                                                gacha.banners[banner.type] = {pulls: [], lastPullDate: response.data.list[0].time}
+                                            if (!gacha.banners[banner.type] && response.data.list.length > 0) {
+                                                gacha.banners[banner.type] = {pulls: [], lastPullDate: response.data.list[0].time || 0}
                                             }
 
                                             for (const pull of response.data.list) {

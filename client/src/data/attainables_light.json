@@ -23,6 +23,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "rf",
+        "standard": true,
         "role": "sentinel",
         "roleDescriptions": ["single_target_burst", "assist", "control"]
     },
@@ -32,6 +33,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "mg",
+        "standard": true,
         "role": "sentinel",
         "roleDescriptions": ["wide_area", "team_support", "displacement"]  
     },
@@ -41,6 +43,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "ar",
+        "standard": true,
         "role": "sentinel",
         "roleDescriptions": ["sustained_damage", "assist"]
     },
@@ -50,6 +53,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "sg",
+        "standard": true,
         "role": "bulwark",
         "roleDescriptions": ["stability_defence", "counterattack", "tile"]
     },
@@ -59,6 +63,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "sg",
+        "standard": true,
         "role": "vanguard",
         "roleDescriptions": ["mixed_damage", "debuff", "displacement"]
     },
@@ -68,6 +73,7 @@
         "item": "character",
         "rarity": "ssr",
         "weapon": "ar",
+        "standard": true,
         "role": "sentinel",
         "roleDescriptions": ["single_target_burst", "extra_action"]
     },
@@ -180,56 +186,64 @@
         "id": 10003,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "rf"
+        "type": "rf",
+        "standard": true
     },
     {
         "name": "classified_manuscript",
         "id": 10002,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "smg"
+        "type": "smg",
+        "standard": true
     },
     {
         "name": "crowned_jackelope",
         "id": 10005,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "bld"
+        "type": "bld",
+        "standard": true
     },
     {
         "name": "expeditionary_pigeon",
         "id": 10007,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "sg"
+        "type": "sg",
+        "standard": true
     },
     {
         "name": "golden_melody",
         "id": 11044,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "ar"
+        "type": "ar",
+        "standard": true
     },
     {
         "name": "guerno",
         "id": 10004,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "ar"
+        "type": "ar",
+        "standard": true
     },
     {
         "name": "heart_seeker",
         "id": 11016,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "sg"
+        "type": "sg",
+        "standard": true
     },
     {
         "name": "mezzaluna",
         "id": 11047,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "sg"
+        "type": "sg",
+        "standard": true
     },
     {
         "name": "mjolnir",
@@ -237,35 +251,40 @@
         "id": 10006,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "mg"
+        "type": "mg",
+        "standard": true
     },
     {
         "name": "optical_illusion",
         "id": 11020,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "mg"
+        "type": "mg",
+        "standard": true
     },
     {
         "name": "papa-figo",
         "id": 10001,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "hg"
+        "type": "hg",
+        "standard": true
     },
     {
         "name": "planeta",
         "id": 11038,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "ar"
+        "type": "ar",
+        "standard": true
     },
     {
         "name": "samosek",
         "id": 10333,
         "item": "weapon",
         "rarity": "ssr",
-        "type": "rf"
+        "type": "rf",
+        "standard": true
     },
     {
         "name": ".380_curva",

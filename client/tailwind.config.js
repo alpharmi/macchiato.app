@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      "md": {"max": "1300px"},
+      "md": {"max": "1370px"},
       "sm": {"max": "700px"},
     },
     fontFamily: {

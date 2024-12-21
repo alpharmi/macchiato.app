@@ -25,27 +25,51 @@
                 <button @click="redirect('/gacha/import')" class="button w-44">Import Pulls</button>
             </div>
 
-            <div class="flex flex-wrap gap-12">
-                <div class="min-w-[19rem] h-[17.5rem] flex flex-col gap-5">
-                    <div class="main-container h-20 relative">
-                        <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Lifetime Pulls</p>
-                        <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].total }}</p>
-                        <p class="absolute w-20 text-center left-2 top-8 text-xl text-description z-10 inline-image"><img src="/items/collapse_piece.webp"> {{ (gacha.banners[bannerFocused.type].total * 150).toLocaleString() }}</p>
-                        <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
+            <div class="flex flex-wrap gap-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="min-w-[19rem] h-[17.5rem] flex flex-col gap-5">
+                        <div class="main-container h-20 relative">
+                            <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Lifetime Pulls</p>
+                            <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].total }}</p>
+                            <p class="absolute w-20 text-center left-2 top-8 text-xl text-description z-10 inline-image"><img src="/items/collapse_piece.webp"> {{ (gacha.banners[bannerFocused.type].total * 150).toLocaleString() }}</p>
+                            <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
+                        </div>
+
+                        <div class="main-container h-20 relative">
+                            <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl"><span class="gradient-ssr px-2 text-main">SSR</span> Pity</p>
+                            <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].pity.ssr }}</p>
+                            <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at 80</p>
+                            <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
+                        </div>
+
+                        <div class="main-container h-20 relative">
+                            <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl"><span class="gradient-sr px-2 text-main">SR</span> Pity</p>
+                            <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].pity.sr }}</p>
+                            <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at 10</p>
+                            <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
+                        </div>
                     </div>
 
-                    <div class="main-container h-20 relative">
-                        <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl"><span class="gradient-ssr px-2 text-main">SSR</span> Pity</p>
-                        <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].pity.ssr }}</p>
-                        <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at 80</p>
-                        <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
-                    </div>
-
-                    <div class="main-container h-20 relative">
-                        <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl"><span class="gradient-sr px-2 text-main">SR</span> Pity</p>
-                        <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].pity.sr }}</p>
-                        <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at 10</p>
-                        <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
+                    <div class="min-w-[19rem] h-[17.5rem] main-container flex flex-col">
+                        <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Stats</p>
+                        <div class="px-2 pt-2 flex justify-center gap-5">
+                            <div>
+                                <p class="font-bold gradient-ssr text-main px-2 w-min">SSR</p>
+                                <p>Pity Average: <span class="text-text font-bold">{{ gacha.banners[bannerFocused.type].stats.ssrAverage }}</span></p>
+                                <p>Winrate: <span class="text-text font-bold">{{ Math.floor(gacha.banners[bannerFocused.type].stats.ssrWinrate * 100) }}%</span></p>
+                            </div>
+                            <div>
+                                <p class="font-bold gradient-sr text-main px-2 w-min">SR</p>
+                                <p>Pity Average: <span class="text-text font-bold">{{ gacha.banners[bannerFocused.type].stats.srAverage }}</span></p>
+                            </div>
+                        </div>
+                        <div class="w-[19rem] h-full px-4 pt-2 flex flex-wrap content-start">
+                            <div v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => pull[4] == 'ssr')" class="w-16 h-16 relative">
+                                <img style="clip-path: polygon(10% 0, 100% 10%, 90% 100%, 0 85%)" class="absolute z-10 top-1 w-full scale-95 rounded-lg" :src="`/${pull[3]}s/${pull[1]}.webp`">
+                                <img class="absolute" src="/pull_background.webp">
+                                <p class="absolute right-0 top-10 z-10 font-bold bg-secondary w-5 text-center">{{ pull[5] }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -78,7 +102,7 @@
             </div>
         </div>
 
-        <div v-if="(gacha && !gacha.banners[bannerFocused.type]) || !gacha" class="flex flex-col justify-center items-center w-full h-[25rem]">
+        <div v-if="(gacha && !gacha.banners[bannerFocused.type]) || !gacha" class="flex flex-col justify-center items-center w-[61.5rem] h-[25rem]">
             <img class="h-24" src="/missing.gif">
             <p>Missing Gacha Data</p>
             <button @click="redirect('/gacha/import')" class="button w-44 mt-2">Import Pulls</button>
@@ -161,7 +185,7 @@
 
                 //var i = 1
                 for (const [bannerType, banner] of Object.entries(gacha.banners)) {
-                    formatted[bannerType] = {pulls: [], total: banner.pulls.length, pity: {ssr: 0, sr: 0}}
+                    formatted[bannerType] = {pulls: [], total: banner.pulls.length, pity: {ssr: 0, sr: 0}, stats: {ssrAverage: [], srAverage: [], ssrWinrate: []}}
 
                     const formattedBanner = formatted[bannerType]
 
@@ -180,15 +204,29 @@
                         formattedBanner.pity.sr += 1
 
                         if (attainable.rarity == "sr" || attainable.rarity == "ssr") {
-                            pullFormatted.push(formattedBanner.pity[attainable.rarity])
+                            const roll = formattedBanner.pity[attainable.rarity]
+
+                            pullFormatted.push(roll)
+                            formattedBanner.stats[`${attainable.rarity}Average`].push(roll)
 
                             formattedBanner.pity[attainable.rarity] = 0
+                        }
+
+                        if (attainable.rarity == "ssr") {
+                            formattedBanner.stats.ssrWinrate.push((attainable.standard) ? 0: 1)
                         }
 
                         formattedBanner.pulls.push(pullFormatted)
                     }
 
                     formattedBanner.pulls.reverse()
+                    formattedBanner.stats.srAverage = Math.floor(formattedBanner.stats.srAverage.reduce((a, b, _, pulls) => a + b / pulls.length, 0))
+                    formattedBanner.stats.ssrAverage = Math.floor(formattedBanner.stats.ssrAverage.reduce((a, b, _, pulls) => a + b / pulls.length, 0))
+                    formattedBanner.stats.ssrWinrate = formattedBanner.stats.ssrWinrate.reduce((a, b, _, pulls) => a + b / pulls.length, 0)
+                    //formattedBanner.stats.srAverage = Math.floor(formattedBanner.pulls.filter(pull => pull[4] == "sr").map(pull => pull[5]).reduce((a, b, _, pulls) => a + b / pulls.length, 0))
+                    //formattedBanner.stats.ssrAverage = Math.floor(formattedBanner.pulls.filter(pull => pull[4] == "ssr").map(pull => pull[5]).reduce((a, b, _, pulls) => a + b / pulls.length, 0))
+
+                    //console.log(formattedBanner)
                 }
 
                 gacha.banners = formatted
