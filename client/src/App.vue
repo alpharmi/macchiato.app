@@ -1,8 +1,8 @@
 <template>
-  <!--<Analytics/>-->
+  <Analytics/>
 
   <header class="h-14 bg-[#00000020] backdrop-blur-lg drop-shadow-md flex items-center sm:pl-2 pl-10 gap-1">
-    <img @click="redirect('/')" class="logo h-3/5" src="/logo.webp" alt="logo">
+    <img @click="redirect('/')" class="logo h-3/5" src="/logo_small.webp" alt="logo">
     <p class="text-2xl"><span class="text-description">{{ currentRoute() }}</span></p>
   </header>
 
