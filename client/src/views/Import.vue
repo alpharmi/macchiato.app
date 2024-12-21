@@ -82,7 +82,7 @@
                 importCommand: 'iwr -useb "https://raw.githubusercontent.com/alpharmi/macchia.to/refs/heads/main/import.ps1" | iex',
                 copied: false,
                 loading: "",
-                production: false,
+                //production: false,
                 version: 1,
                 method: 1
             }
@@ -213,7 +213,7 @@
                             }
 
                             if (success) {
-                                await fetch("https://macchiato.app/api/logImport?" + new URLSearchParams({
+                                await fetch("https://macchiatogfl.vercel.app/api/logImport?" + new URLSearchParams({
                                     "uid": gachaData.uid,
                                     "method": gachaData.method
                                 })) //will probably go in the future, just want to log if things are working at the start.
