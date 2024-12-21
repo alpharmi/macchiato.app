@@ -63,8 +63,8 @@
                                 <p>Pity Average: <span class="text-text font-bold">{{ gacha.banners[bannerFocused.type].stats.srAverage }}</span></p>
                             </div>
                         </div>
-                        <div class="w-[19rem] h-full px-4 pt-2 flex flex-wrap content-start">
-                            <div v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => pull[4] == 'ssr')" class="w-16 h-16 relative overflow-hidden">
+                        <div class="w-[19rem] h-full px-4 pt-2 flex flex-wrap content-start overflow-y-auto mb-4">
+                            <div v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => pull[4] == 'ssr')" class="w-[3.9rem] h-[3.9rem] relative overflow-hidden">
                                 <img style="clip-path: polygon(10% 0, 100% 10%, 90% 100%, 0 85%)" :class="(pull[3] == 'weapon') ? 'pull-weapon !right-3': ''" class="absolute z-10 top-1 w-full scale-95 rounded-lg" :src="`/${pull[3]}s/${pull[1]}.webp`">
                                 <img class="absolute" src="/pull_background.webp">
                                 <p class="absolute right-0 top-10 z-10 font-bold bg-secondary w-5 text-center">{{ pull[5] }}</p>
