@@ -90,7 +90,7 @@
                                 </tr>
                                 <tr v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => filters.rarities[pull[4]]).slice(0, filters.amount)" :class="`pull-${pull[4]}`" class="h-10 border-t border-[#2c3038]">
                                     <th class="w-[12.5rem] pl-5 text-description">{{ pull[0] }}</th>
-                                    <th class="text-center">{{ pull[5] }}</th>
+                                    <th><div class="flex justify-center">{{ pull[5] }}<Tooltip v-if="pull[6]" message="Guaranteed"><img class="w-2" src="/guaranteed.webp"></Tooltip></div></th>
                                     <th class="text-left pl-2 flex items-center capitalize"><img :class="`pull-${pull[3]}`" class="w-10 h-10 mr-2" :src="`/${pull[3]}s/${pull[1]}.webp`">{{ pull[2] }}</th>
                                 </tr>
                             </table>
@@ -112,6 +112,7 @@
 
 <script setup>
     import Hint from "../components/Hint.vue";
+    import Tooltip from "../components/Tooltip.vue";
 </script>
 
 <script>
@@ -221,7 +222,7 @@
 
                             if (!attainable.standard && guaranteed) {
                                 //formattedBanner.stats.ssrWinrate.push(0)
-                                pullFormatted.push(guaranteed)
+                                pullFormatted.push(true)
                                 guaranteed = false
                             } else if (!attainable.standard && !guaranteed) {
                                 formattedBanner.stats.ssrWinrate.push(1)

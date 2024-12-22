@@ -44,7 +44,7 @@
                         <div class="flex flex-col gap-2 mr-5">
                             <p class="text-xl">Open File Explorer and find the following file.</p>
                             <p class="text-md text-main bg-text p-2"><span class="text-[#997708]">Drive:</span>\Users\<span class="text-[#997708]">Your User</span>\AppData\LocalLow\SunBorn\EXILIUM\Player.log</p>
-                            <p class="text-sm text-description mb-3 flex">If you don't see AppData, that's because you have Hidden Items Disabled. <Tooltip src="/appdata.webp"/></p>
+                            <p class="text-sm text-description mb-3 flex">If you don't see AppData, that's because you have Hidden Items Disabled. <Tooltip src="/appdata.webp"><p class="border border-highlight text-xs text-highlight cursor-pointer rounded-full ml-1 pt-0.5 px-[0.4rem]">?</p></Tooltip></p>
                         </div>
                     </div>
                     <div class="main-container h-auto flex w-max pt-2">
