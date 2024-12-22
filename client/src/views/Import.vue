@@ -27,7 +27,7 @@
                                 </button>
                                 <p class="text-md text-main">{{ importCommand }}</p>
                             </div>
-                            <a href="https://github.com/alpharmi/macchia.to/blob/main/import.ps1" class="mb-3 text-sm">GitHub</a>
+                            <a href="https://github.com/alpharmi/macchiato.app/blob/main/import.ps1" class="mb-3 text-sm">GitHub</a>
                         </div>
                     </div>
                     <div class="main-container h-auto flex w-max pt-2">
