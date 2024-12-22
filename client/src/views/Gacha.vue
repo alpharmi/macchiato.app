@@ -1,9 +1,9 @@
 <template>
     <Hint message="This page has yet to be optimised to all screen sizes.,This page still has features in progress, stay tuned."/>
 
-    <div class="w-full h-full flex justify-center pt-10 gap-14">
-        <div class="w-40 flex flex-col gap-2">
-            <button @click="updateBanner(banner)" v-for="banner of banners" :class="(banner.name == bannerFocused.name) ? 'scale-110 translate-x-2 hover:scale-[1.12] hover:translate-x-2.5': 'hover:scale-105 hover:translate-x-1'" class="banner min-w-40 w-full h-20 relative group transition-transform">
+    <div class="w-full h-full flex justify-center pt-10 gap-14 mb:flex-wrap mb:flex-col">
+        <div class="w-40 flex flex-col mb:flex-row mb:items-center mb:justify-center mb:w-full flex-wrap gap-2">
+            <button @click="updateBanner(banner)" v-for="banner of banners" :class="(banner.name == bannerFocused.name) ? 'scale-110 mb:!translate-x-0 translate-x-2 hover:scale-[1.12] hover:translate-x-2.5': 'hover:scale-105 hover:translate-x-1'" class="banner min-w-40 w-40 h-20 mb:mx-2 relative group transition-transform">
                 <div :class="(banner.name == bannerFocused.name) ? 'overflow-hidden': ''" class="absolute w-full bottom-0 h-[81%] rounded-md">
                     <img :class="(banner.name == bannerFocused.name) ? 'group-hover:scale-110 scale-105': ''" class="absolute w-full h-20 bottom-0 transition-transform" :src="`/banners/${(banner.name == bannerFocused.name) ? `${banner.name}_focused`: banner.name}.webp`">
                 </div>
@@ -11,7 +11,7 @@
             </button>
         </div>
 
-        <div class="min-w-0.5 h-auto from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-2"/>
+        <div class="min-w-0.5 h-auto from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-2 md:h-0.5"/>
 
         <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max">
             <div class="flex gap-3 items-center justify-between w-full">
@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <div v-if="(gacha && !gacha.banners[bannerFocused.type]) || !gacha" class="flex flex-col justify-center items-center w-[61.5rem] h-[25rem]">
+        <div v-if="(gacha && !gacha.banners[bannerFocused.type]) || !gacha" class="flex flex-col justify-center items-center mb:w-full w-[61.5rem] max-h-[25rem] mb:pb-20">
             <img class="h-24" src="/missing.gif">
             <p>Missing Gacha Data</p>
             <button @click="redirect('/gacha/import')" class="button w-44 mt-2">Import Pulls</button>
