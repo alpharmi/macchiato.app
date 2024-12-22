@@ -1,5 +1,5 @@
 {
-  "name": "macchia.to",
+  "name": "macchiato.app",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -26,6 +26,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alpharmi/macchia.to"
+    "url": "https://github.com/alpharmi/macchiato.app"
   }
 }
