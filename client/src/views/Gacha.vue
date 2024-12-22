@@ -188,6 +188,7 @@
                     formatted[bannerType] = {pulls: [], total: banner.pulls.length, pity: {ssr: 0, sr: 0}, stats: {ssrAverage: [], srAverage: [], ssrWinrate: []}}
 
                     const formattedBanner = formatted[bannerType]
+                    var guaranteed = false
 
                     for (const pull of banner.pulls.reverse()) {
                         const attainable = this.findAttainableById(pull[0]) || {name: `unknown`, displayName: `Unknown-${pull[0]}`, item: "character", rarity: "r"}
@@ -213,7 +214,20 @@
                         }
 
                         if (attainable.rarity == "ssr") {
-                            formattedBanner.stats.ssrWinrate.push((attainable.standard) ? 0: 1)
+                            if (attainable.standard) {
+                                guaranteed = true
+                                formattedBanner.stats.ssrWinrate.push(0)
+                            }
+
+                            if (!attainable.standard && guaranteed) {
+                                //formattedBanner.stats.ssrWinrate.push(0)
+                                pullFormatted.push(guaranteed)
+                                guaranteed = false
+                            } else if (!attainable.standard && !guaranteed) {
+                                formattedBanner.stats.ssrWinrate.push(1)
+                            }
+
+                            //formattedBanner.stats.ssrWinrate.push((guaranteed) ? 0: 1)
                         }
 
                         formattedBanner.pulls.push(pullFormatted)
