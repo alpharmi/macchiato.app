@@ -79,7 +79,7 @@
     export default {
         data() {
             return {
-                importCommand: 'iwr -useb "https://raw.githubusercontent.com/alpharmi/macchia.to/refs/heads/main/import.ps1" | iex',
+                importCommand: 'iwr -useb "https://raw.githubusercontent.com/alpharmi/macchiato.app/refs/heads/main/import.ps1" | iex',
                 copied: false,
                 loading: "",
                 //production: false,
