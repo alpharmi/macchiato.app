@@ -1,4 +1,4 @@
-User-agent: *
+User-Agent: *
 Allow: /
 Disallow: /gacha/import
 
