@@ -1,6 +1,6 @@
 <template>
     <div class="flex w-full flex-col items-center justify-center gap-5">
-        <p class="text-5xl font-bold p-2 px-10 text-hi">Import Pulls</p>
+        <p class="text-5xl font-black p-2 px-10 font-harmony">Import Pulls</p>
         <div class="w-[55rem] h-0.5 from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-r ml-20 mr-14"/>
         <div class="flex flex-col gap-5 w-[55rem]">
             <div class="flex gap-3 justify-start w-full">
