@@ -14,6 +14,11 @@
                     <button @click="redirect('/gacha')" class="button w-max inline-image"><img src="/items/targeted_access_permission.webp" alt="item"> Gacha Tracker</button>
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">GACHA</p>
                 </div>
+                <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative pt-4 gap-1">
+                    <p>Calculate the chance of getting a SSR in your next pull, how far you are from soft pity, how much you earn from dailies, and much more.</p>
+                    <button @click="redirect('/calculator')" class="button w-max inline-image"><img src="/items/collapse_piece.webp" alt="item"> Gacha Calculator</button>
+                    <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">CALC</p>
+                </div>
             </div>
         </div>
 
