@@ -18,6 +18,15 @@
         "roleDescriptions": ["melee_damage", "combo_attack", "stealth"]
     },
     {
+        "name": "macchiato",
+        "id": 1034,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "rf",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_damage", "preemptive_counterattack"]
+    },
+    {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
@@ -180,6 +189,13 @@
         "item": "weapon",
         "rarity": "ssr",
         "type": "bld"
+    },
+    {
+        "name": "bittersweet_caramel",
+        "id": 10343,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "rf"
     },
     {
         "name": "arcana",
@@ -416,6 +432,14 @@
         "item": "weapon",
         "rarity": "sr",
         "type": "sg"
+    },
+    {
+        "name": "walther_wa2000",
+        "displayName": "Walther WA2000",
+        "id": 10342,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "rf"
     },
     {
         "name": "retired_sportivo_calibro_12",
