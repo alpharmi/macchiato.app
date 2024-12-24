@@ -103,8 +103,8 @@
                 }
             },
             calculateChance(pity, pullAmount, baseChance, pityChance) {
-                if (pity > 65) {
-                    pity = 65
+                if (pity > 79) {
+                    pity = 79
                 }
 
                 const basePulls = pity < (58 - pullAmount) ? pullAmount : (pity < 58 ? 58 - pity : 0)
@@ -156,11 +156,11 @@
                 const accessPermissions = this.display.access_permission.total
 
                 if (this.options.banner_type[0]) {
-                    this.display.stats.nextPull = this.calculateChance(accessPermissions, 1, 0.007, 0.05).toFixed(2)
-                    this.display.stats.next10Pull = this.calculateChance(accessPermissions, 10, 0.007, 0.05).toFixed(2)
+                    this.display.stats.nextPull = this.calculateChance(accessPermissions, 1, 0.007, 0.04518).toFixed(2)
+                    this.display.stats.next10Pull = this.calculateChance(accessPermissions, 10, 0.007, 0.04518).toFixed(2)
                 } else {
-                    this.display.stats.nextPull = this.calculateChance(accessPermissions, 1, 0.006, 0.05).toFixed(2)
-                    this.display.stats.next10Pull = this.calculateChance(accessPermissions, 10, 0.006, 0.05).toFixed(2)
+                    this.display.stats.nextPull = this.calculateChance(accessPermissions, 1, 0.006, 0.04518).toFixed(2)
+                    this.display.stats.next10Pull = this.calculateChance(accessPermissions, 10, 0.006, 0.04518).toFixed(2)
                 }
 
                 this.display.stats.softPity = (1 - ((58 - accessPermissions) / 58)).toFixed(2)
