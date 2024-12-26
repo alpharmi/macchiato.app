@@ -18,7 +18,7 @@
         "roleDescriptions": ["melee_damage", "combo_attack", "stealth"]
     },
     {
-        "name": "macchiato",
+        "name": "makiatto",
         "id": 1034,
         "item": "character",
         "rarity": "ssr",
