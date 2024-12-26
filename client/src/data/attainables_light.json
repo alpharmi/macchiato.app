@@ -436,7 +436,7 @@
     {
         "name": "walther_wa2000",
         "displayName": "Walther WA2000",
-        "id": 10341,
+        "id": 10342,
         "item": "weapon",
         "rarity": "sr",
         "type": "rf"
@@ -563,5 +563,13 @@
         "id": 10411,
         "item": "weapon",
         "type": "sg"
-    }
+    },
+    {
+        "name": "retired_walther_wa2000",
+        "displayName": "Retired Walther WA2000",
+        "id": 10341,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "rf"
+    },
 ]
