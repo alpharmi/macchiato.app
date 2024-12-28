@@ -69,7 +69,7 @@
                         <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl h-min">2</p>
                         <div class="flex flex-col gap-2 pr-3 mb-3 w-full h-80">
                             <p class="text-xl px-2">Follow the video tutorial on how to get Gacha Data.</p>
-                            <iframe height="100%" src="https://www.youtube.com/embed/_dGwHtRE76U?si=nb82jKYJmNq_SA7e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe height="100%" src="https://www.youtube.com/embed/xzWmAHAYK2I?si=yp4XkDJUhW6ydh46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="main-container max-w-max py-1 flex items-start">
