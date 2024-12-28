@@ -60,6 +60,7 @@
                     </div>
                 </div>
                 <div v-if="method == 'IOS'" class="flex flex-col gap-3">
+                    <Hint class="!justify-start" message="IOS Importing is still in testing.,If you find any issues please report them on <a href='https://github.com/alpharmi/macchiato.app'>GitHub</a>"/>
                     <div class="main-container max-w-max py-1 flex items-start">
                         <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl h-min">1</p>
                         <p class="text-xl px-2">Install <a href="https://apps.apple.com/us/app/stream-network-debug-tool/id1312141691">Stream - Network Debug Tool</a> from the AppStore.</p>
@@ -94,6 +95,7 @@
 </template>
 
 <script setup>
+    import Hint from "../components/Hint.vue"
     import Tooltip from "../components/Tooltip.vue";
 </script>
 
