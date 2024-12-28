@@ -79,7 +79,7 @@
                         <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl h-min">4</p>
                         <div class="flex flex-col gap-2 w-full pr-5">
                             <p class="text-xl">Paste the Gacha Data into the input below.</p>
-                            <input ref="input" class="input mr-5 mb-3 w-full" type="text" name="input" placeholder="Gacha Data" >
+                            <input ref="inputIOS" class="input mr-5 mb-3 w-full" type="text" name="inputIOS" placeholder="Gacha Data" >
                         </div>
                     </div>
                 </div>
@@ -179,12 +179,12 @@
                         this.error("Invalid Input.")
                     }
                 } else if (this.method == "IOS") {
-                    const input = this.$refs.input.value
+                    const input = this.$refs.inputIOS.value
 
-                    if (input) {
+                    if (input && input.includes("Host: ") && input.includes("Authorization: ")) {
                         gachaData.gachaRecordUrl = `https://${input.split("Host: ")[1].split(" X-Unity-Version")[0]}/list`
                         gachaData.accessToken = input.split("Authorization: ")[1].split("Accept-Encoding")[0]
-                        gachaData.uid = input.split("POST ")[1].split("&u=")[1].split(" HTTP")[0]
+                        gachaData.uid = input.split("POST ")[1].split("&u=")[1].split(" HTTP")[0] || 0
                         gachaData.method = "IOS"
                     }
                 }
