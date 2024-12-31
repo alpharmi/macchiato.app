@@ -140,7 +140,7 @@
 
                 this.display.collapse_piece.owned = this.options.collapse_piece
                 this.display.collapse_piece.credit_token_exchange = this.options.credit_token
-                this.display.collapse_piece.commisions = 60 * Math.floor(this.options.days_until_pull / 7)
+                this.display.collapse_piece.commisions = 60 * this.options.days_until_pull
                 this.display.collapse_piece.crystal_contract = (this.options.crystal_contract) ? (80 * this.options.days_until_pull): 0
                 this.display.collapse_piece.total = Object.values(this.display.collapse_piece).slice(1).reduce((a, b) => a + b)
 
