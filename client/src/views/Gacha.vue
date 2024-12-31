@@ -22,7 +22,7 @@
                         <p v-if="labels" :class="(labels[1].length > 40) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
                     </div>
                 </div>
-                <button @click="redirect('/gacha/import')" class="button w-44 h-9">Import Pulls</button>
+                <button @click="redirect('/gacha/import')" class="button w-44">Import Pulls</button>
             </div>
 
             <div class="flex flex-wrap gap-8">
