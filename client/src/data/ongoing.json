@@ -1,9 +1,9 @@
 {
     "banners": [
-        {"name": "makiatto", "id": 3, "type": "character"},
-        {"name": "bittersweet_caramel", "id": 4, "type": "weapon"},
-        {"name": "tololo", "type": "character"},
-        {"name": "planeta", "type": "weapon"},
+        {"name": "daiyan", "id": 3, "type": "character"},
+        {"name": "heavy_strings", "id": 4, "type": "weapon"},
+        {"name": "mosin-nagant", "type": "character"},
+        {"name": "samosek", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}
     ]
 }

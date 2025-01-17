@@ -27,6 +27,15 @@
         "roleDescriptions": ["single_target_damage", "preemptive_counterattack"]
     },
     {
+        "name": "daiyan",
+        "id": 1032,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "vanguard",
+        "roleDescriptions": ["single_target_burst", "first_strike"]
+    },
+    {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
@@ -196,6 +205,13 @@
         "item": "weapon",
         "rarity": "ssr",
         "type": "rf"
+    },
+    {
+        "name": "heavy_strings",
+        "id": 11053,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
     },
     {
         "name": "arcana",
@@ -440,6 +456,20 @@
         "item": "weapon",
         "rarity": "sr",
         "type": "rf"
+    },
+    {
+        "name": "type_95",
+        "id": 11052,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
+        "name": "retired_type_95",
+        "id": 11051,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
     },
     {
         "name": "retired_sportivo_calibro_12",
