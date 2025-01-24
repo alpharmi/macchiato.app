@@ -142,11 +142,15 @@
             },
             */
             async requestGacha(gachaLogUrl, bannerId, headers, next) {
-                return await fetch(gachaLogUrl, {
-                    "method": "POST",
-                    "headers": headers,
-                    "body": `type_id=${bannerId}&limit=20&next=${next}`
-                }).then(response => response.json())
+                try {
+                    return await fetch(gachaLogUrl, {
+                        "method": "POST",
+                        "headers": headers,
+                        "body": `type_id=${bannerId}&limit=20&next=${next}`
+                    }).then(response => response.json())
+                } catch {
+                    return {code: -1}
+                }
             },
             async importGacha(input) {
                 var gachaData = {uid: undefined, accessToken: undefined, gachaRecordUrl: undefined, method: undefined}
@@ -193,8 +197,6 @@
 
                 if (gachaData) {
                     if (this.loading == "") {
-                        const gacha = {banners: {}, version: this.version}
-
                         if (gachaData && gachaData.uid && gachaData.accessToken && gachaData.gachaRecordUrl) {
                             /*
                             const importGachaUrl = this.production? "https://macchiatogfl.vercel.app/api/importGacha?": "http://localhost:3000/api/importGacha?"
@@ -205,16 +207,21 @@
                                 this.error("Server down. Please try again later.")
                             })
                             */
-                            var success = true
+                            const cachedGacha = localStorage.getItem("gacha")
+                            const gacha = cachedGacha ? JSON.parse(cachedGacha): {banners: {}, version: this.version}
 
                             const headers = new Headers()
                             headers.append("Authorization", gachaData.accessToken)
                             headers.append("Content-Type", "application/x-www-form-urlencoded")
 
+                            var success = true
+
                             for (const banner of ongoing.banners) {
                                 if (banner.id && success) {
                                     var next = ""
                                     var itteration = 1
+                                    var latestPulls = []
+                                    const lastPullDate = gacha.banners[banner.type] ? gacha.banners[banner.type].lastPullDate: 0
 
                                     while (true) {
                                         this.loading = `Importing ${this.capitalise(banner.name.replaceAll("_", " "))} banner [${itteration}]...`
@@ -222,21 +229,26 @@
                                         const response = await this.requestGacha(gachaData.gachaRecordUrl, banner.id, headers, next)
 
                                         if (response.code == -1) {
-                                            this.error("GFL2 Server Down or Invalid Input.\nPlease try again later.")
+                                            this.error("GFL2 Server Down or Invalid / Expired Input.\nPlease try again later.")
 
                                             success = false
 
                                             break
                                         } else {
                                             if (!gacha.banners[banner.type] && response.data.list.length > 0) {
-                                                gacha.banners[banner.type] = {pulls: [], lastPullDate: response.data.list[0].time || 0}
+                                                gacha.banners[banner.type] = {pulls: [], lastPullDate: 0}
                                             }
 
-                                            for (const pull of response.data.list) {
-                                                gacha.banners[banner.type].pulls.push([pull.item, pull.time])
-                                            }
+                                            const pulls = response.data.list.filter(pull => pull.time > lastPullDate).map(pull => [pull.item, pull.time])
+                                            latestPulls = latestPulls.concat(pulls)
 
-                                            if (response.data.next == "") {
+                                            /*
+                                            for (const pull of latestPulls) {
+                                                //gacha.banners[banner.type].pulls.push([pull.item, pull.time])
+                                            }
+                                            */
+
+                                            if (response.data.next == "" || pulls.length == 0) {
                                                 break
                                             } else {
                                                 next = response.data.next
@@ -244,6 +256,9 @@
                                             }
                                         }
                                     }
+
+                                    gacha.banners[banner.type].pulls = latestPulls.concat(gacha.banners[banner.type].pulls)
+                                    gacha.banners[banner.type].lastPullDate = gacha.banners[banner.type].pulls[0][1]
                                 }
                             }
 
@@ -256,8 +271,10 @@
                                     this.redirect("/gacha")
                                 }, 1000);*/
 
+                                console.log(gacha)
+
                                 localStorage.setItem("gacha", JSON.stringify(gacha))
-                                //this.loading = "Successfully imported banners."
+                                this.loading = "Successfully imported banners."
 
                                 this.redirect("/gacha")
                             }

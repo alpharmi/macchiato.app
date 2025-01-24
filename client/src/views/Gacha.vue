@@ -4,7 +4,7 @@
     <div class="w-full h-full flex justify-center pt-10 gap-14 mb:flex-wrap mb:flex-col">
         <div class="w-40 flex flex-col mb:flex-row mb:items-center mb:justify-center mb:w-full flex-wrap gap-2">
             <button @click="updateBanner(banner)" v-for="banner of banners" :class="(banner.name == bannerFocused.name) ? 'scale-110 mb:!translate-x-0 translate-x-2 hover:scale-[1.12] hover:translate-x-2.5': 'hover:scale-105 hover:translate-x-1'" class="banner min-w-40 w-40 h-20 mb:mx-2 relative group transition-transform">
-                <div :class="(banner.name == bannerFocused.name) ? 'overflow-hidden': ''" class="absolute w-full bottom-0 h-[81%] rounded-md">
+                <div :class="(banner.name == bannerFocused.name) ? 'overflow-hidden': 'overflow-hidden'" class="absolute w-full bottom-0 h-[81%] rounded-md">
                     <img :class="(banner.name == bannerFocused.name) ? 'group-hover:scale-110 scale-105': ''" class="absolute w-full h-20 bottom-0 transition-transform" :src="`/banners/${(banner.name == bannerFocused.name) ? `${banner.name}_focused`: banner.name}.webp`">
                 </div>
                 <div :class="(banner.name == bannerFocused.name) ? 'outline-highlight': 'group-hover:outline-[#9b8d76]'" class="absolute bottom-0 outline outline-2 outline-description rounded-md -z-10 w-full h-[81%]"></div>
@@ -13,13 +13,13 @@
 
         <div class="min-w-0.5 h-auto from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-2 md:h-0.5"/>
 
-        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max">
+        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max max-w-[62rem]">
             <div class="flex gap-3 items-center justify-between w-full">
                 <div class="flex items-center gap-3 flex-wrap">
                     <p class="text-5xl font-black font-harmony-sans capitalize">{{ bannerFocused.name.replaceAll("_", " ") }}</p>
                     <div class="flex gap-3">
-                        <p v-if="labels" :class="(labels[1].length > 40) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
-                        <p v-if="labels" :class="(labels[1].length > 40) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
+                        <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
+                        <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
                     </div>
                 </div>
                 <button @click="redirect('/gacha/import')" class="button w-44">Import Pulls</button>
