@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.macchiato.app/</loc>
+        <loc>https://macchiato.app/</loc>
         <lastmod>2024-12-23</lastmod>
     </url>
     <url>
-        <loc>https://www.macchiato.app/gacha</loc>
+        <loc>https://macchiato.app/gacha</loc>
         <lastmod>2024-12-23</lastmod>
     </url>
     <url>
-        <loc>https://www.macchiato.app/gacha/import</loc>
+        <loc>https://macchiato.app/gacha/import</loc>
         <lastmod>2024-12-23</lastmod>
     </url>
     <url>
-        <loc>https://www.macchiato.app/calculator</loc>
+        <loc>https://macchiato.app/calculator</loc>
         <lastmod>2024-12-24</lastmod>
     </url>
 </urlset>
