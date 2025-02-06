@@ -36,6 +36,15 @@
         "roleDescriptions": ["single_target_burst", "first_strike"]
     },
     {
+        "name": "dushevnaya",
+        "id": 1023,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "rf",
+        "role": "support",
+        "roleDescriptions": ["mapwide_buffs", "tile", "assist"]
+    },
+    {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
@@ -212,6 +221,13 @@
         "item": "weapon",
         "rarity": "ssr",
         "type": "ar"
+    },
+    {
+        "name": "eulogistic_verse",
+        "id": 10233,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "rf"
     },
     {
         "name": "arcana",

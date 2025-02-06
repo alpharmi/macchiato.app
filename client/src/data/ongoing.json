@@ -1,9 +1,9 @@
 {
     "banners": [
-        {"name": "daiyan", "id": 3, "type": "character"},
-        {"name": "heavy_strings", "id": 4, "type": "weapon"},
-        {"name": "mosin-nagant", "type": "character"},
-        {"name": "samosek", "type": "weapon"},
+        {"name": "dushevnaya", "id": 3, "type": "character"},
+        {"name": "eulogistic_verse", "id": 4, "type": "weapon"},
+        {"name": "suomi", "type": "character"},
+        {"name": "unspoken_calling", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}
     ]
 }
