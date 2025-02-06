@@ -8,7 +8,6 @@
     "build": "cd client && vite build"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.4.1",
     "autoprefixer": "^10.4.13",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
