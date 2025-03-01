@@ -45,6 +45,15 @@
         "roleDescriptions": ["mapwide_buffs", "tile", "assist"]
     },
     {
+        "name": "centaureissi",
+        "id": 1028,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "support",
+        "roleDescriptions": ["heal_&_stability_regen", "assist", "buff"]
+    },
+    {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
@@ -228,6 +237,14 @@
         "item": "weapon",
         "rarity": "ssr",
         "type": "rf"
+    },
+    {
+        "name": "maids_rules",
+        "displayName": "Maid's Rules",
+        "id": 11056,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
     },
     {
         "name": "arcana",

@@ -1,9 +1,9 @@
 {
     "banners": [
-        {"name": "dushevnaya", "id": 3, "type": "character"},
-        {"name": "eulogistic_verse", "id": 4, "type": "weapon"},
-        {"name": "suomi", "type": "character"},
-        {"name": "unspoken_calling", "type": "weapon"},
+        {"name": "centaureissi", "id": 3, "type": "character"},
+        {"name": "maids_rules", "id": 4, "type": "weapon"},
+        {"name": "ullrid", "type": "character"},
+        {"name": "rectrix", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}
     ]
 }
