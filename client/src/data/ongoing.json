@@ -1,7 +1,7 @@
 {
     "banners": [
         {"name": "centaureissi", "id": 3, "type": "character"},
-        {"name": "maids_rules", "id": 4, "type": "weapon"},
+        {"name": "maids_rules", "displayName": "Maid's Rules", "id": 4, "type": "weapon"},
         {"name": "ullrid", "type": "character"},
         {"name": "rectrix", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}

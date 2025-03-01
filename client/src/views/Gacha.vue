@@ -16,7 +16,7 @@
         <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max max-w-[62rem]">
             <div class="flex gap-3 items-center justify-between w-full">
                 <div class="flex items-center gap-3 flex-wrap">
-                    <p class="text-5xl font-black font-harmony-sans capitalize">{{ bannerFocused.name.replaceAll("_", " ") }}</p>
+                    <p class="text-5xl font-black font-harmony-sans capitalize">{{ (bannerFocused.displayName || bannerFocused.name).replaceAll("_", " ") }}</p>
                     <div class="flex gap-3">
                         <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
                         <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
