@@ -498,6 +498,13 @@
         "type": "ar"
     },
     {
+        "name": "sturmgewehr_36",
+        "id": 11055,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
@@ -536,6 +543,13 @@
         "name": "retired_ots-14",
         "displayName": "Retired OTs-14",
         "id": 11010,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_sturmgewehr_36",
+        "id": 11054,
         "item": "weapon",
         "rarity": "r",
         "type": "ar"
