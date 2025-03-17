@@ -1,7 +1,8 @@
 <template>
-  <header class="h-14 bg-[#00000020] backdrop-blur-lg drop-shadow-md flex items-center sm:pl-2 pl-10 gap-1">
+  <header class="h-14 bg-[#00000020] backdrop-blur-lg drop-shadow-md flex items-center sm:pl-2 pl-10 gap-1 relative">
     <img @click="redirect('/')" class="logo h-3/5" src="/logo_small.webp" alt="logo">
     <p class="text-2xl"><span class="text-description">{{ currentRoute() }}</span></p>
+    <button v-if="currentRoute()" @click="back()" class="h-full w-10 flex items-center justify-center"><img class="h-5 bg brightness-[0.7]" src="/return.webp"></button>
   </header>
 
   <main class="w-full h-max p-12 sm:p-3 !pt-12 min-h-[calc(100vh-3.5rem)]">
@@ -24,6 +25,9 @@
     methods: {
       currentRoute() {
         return (this.$router.currentRoute.value.path.length == 1) ? "": this.$router.currentRoute.value.path
+      },
+      back() {
+        this.$router.back()
       },
       redirect(route) {
           this.$router.push({
