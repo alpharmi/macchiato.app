@@ -1,5 +1,5 @@
 <template>
-    <Hint message="This page has yet to be optimised to all screen sizes.,This page still has features in progress, stay tuned."/>
+    <Hint message="Mobile UI change will be released soon.,More features and info coming soon."/>
 
     <div class="w-full h-full flex justify-center pt-10 gap-14 mb:flex-wrap mb:flex-col">
         <div class="w-40 flex flex-col mb:flex-row mb:items-center mb:justify-center mb:w-full flex-wrap gap-2">
@@ -13,11 +13,11 @@
 
         <div class="min-w-0.5 h-auto from-transparent via-[#1a1a1a] via-50% to-transparent brightness-150 bg-gradient-to-b ml-2 md:h-0.5"/>
 
-        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max max-w-[62rem]">
-            <div class="flex gap-3 items-center justify-between w-full">
-                <div class="flex items-center gap-3 flex-wrap">
+        <div v-if="gacha && gacha.banners[bannerFocused.type]" class="gacha-main flex flex-col gap-10 flex-wrap w-max max-w-[62rem] sm:w-full">
+            <div class="flex sm:flex-col gap-3 items-center justify-between w-full">
+                <div class="flex items-center sm:justify-center gap-3 flex-wrap">
                     <p class="text-5xl font-black font-harmony-sans capitalize">{{ (bannerFocused.displayName || bannerFocused.name).replaceAll("_", " ") }}</p>
-                    <div class="flex gap-3">
+                    <div class="flex flex-wrap sm:justify-center gap-3">
                         <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
                         <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
                     </div>
@@ -25,8 +25,8 @@
                 <button @click="redirect('/gacha/import')" class="button w-44">Import Pulls</button>
             </div>
 
-            <div class="flex flex-wrap gap-8">
-                <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex flex-wrap sm:justify-center w-full gap-8">
+                <div class="flex flex-col sm:flex-col md:flex-row gap-8">
                     <div class="min-w-[19rem] h-[17.5rem] flex flex-col gap-5">
                         <div class="main-container h-20 relative">
                             <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Lifetime Pulls</p>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="main-container h-auto min-w-[38rem] ox">
+                <div class="main-container h-auto min-w-[38rem]">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Pull History</p>
 
                     <div class="px-5 flex-col w-full flex justify-center items-center">
