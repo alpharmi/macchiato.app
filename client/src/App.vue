@@ -12,6 +12,9 @@
   <footer class="h-auto min-h-20 w-full p-3 text-center bg-[#0a0a0a] flex flex-col items-center justify-center text-description">
     <p>macchiato</p>
     <p>Girls' Frontline 2: Exilium and content are trademarks and copyright of SUNBORN Information or MicaTeam.</p>
+    <div class="flex">
+        <button @click="redirect('/privacy-policy')" class="text-highlight"><a>Privacy Policy</a></button>
+    </div>
   </footer>
 </template>
 

@@ -172,6 +172,7 @@ a {
 a:hover {
     border-bottom: 1px var(--highlight) solid;
     padding-bottom: 0px;
+    filter: brightness(125%);
 }
 
 .inline-image {
