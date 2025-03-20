@@ -54,6 +54,15 @@
         "roleDescriptions": ["heal_&_stability_regen", "assist", "buff"]
     },
     {
+        "name": "klukai",
+        "id": 1052,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "sentinel",
+        "roleDescriptions": ["wide_area", "debuff", "stack"]
+    },
+    {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
@@ -247,6 +256,13 @@
         "type": "ar"
     },
     {
+        "name": "skylla",
+        "id": 10523,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
+    },
+    {
         "name": "arcana",
         "id": 10003,
         "item": "weapon",
@@ -418,6 +434,13 @@
         "type": "ar"
     },
     {
+        "name": "416",
+        "id": 10522,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
         "name": "pecheneg-sp",
         "displayName": "Pecheneg-SP",
         "id": 11026,
@@ -545,6 +568,13 @@
         "id": 11010,
         "item": "weapon",
         "rarity": "r",
+        "type": "ar"
+    },
+    {
+        "name": "retired_416",
+        "id": 10521,
+        "item": "weapon",
+        "rarity": "sr",
         "type": "ar"
     },
     {
