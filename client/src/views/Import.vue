@@ -257,6 +257,7 @@
                                         }
                                     }
 
+                                    if (!gacha.banners[banner.type]) continue;
                                     gacha.banners[banner.type].pulls = latestPulls.concat(gacha.banners[banner.type].pulls)
                                     gacha.banners[banner.type].lastPullDate = gacha.banners[banner.type].pulls[0][1]
                                 }
