@@ -4,7 +4,7 @@
             <div class="flex flex-col gap-5">
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Welcome</p>
-                    <p><span class="text-highlight z-10">macchiato</span> currently includes a Gacha Counter, and general game information for Girls' Frontline 2. Please note the site is still in development and some features may not work as expected.</p>
+                    <p><span class="text-highlight z-10">macchiato.app</span> currently includes a Gacha Counter, Gacha Calculator, and general game information for Girls' Frontline 2. Constantly kept up to date and new content added frequently.</p>
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">WELCOME</p>
                 </div>
             </div>
