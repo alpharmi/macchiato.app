@@ -8,6 +8,8 @@
             <p>macchiato.app will never save user data, such as passwords, UIDs, usernames, emails, etc.</p>
             <p class="text-xl pt-5">Open source</p>
             <p>macchiato.app is open source. If you're interested, all the code is available at <a href="https://github.com/alpharmi/macchiato.app">GitHub</a>.</p>
+            <p class="text-xl pt-5">Contact Us</p>
+            <p>Questions or concerns about Privacy? Contact us at <a href="mailto:alpharmifgc">alpharmifgc@gmail.com</a></p>
         </div>
     </div>
 </template>
