@@ -235,7 +235,7 @@
 
                                             break
                                         } else {
-                                            if (!gacha.banners[banner.type] && response.data.list.length > 0) {
+                                            if (!gacha.banners[banner.type]) {
                                                 gacha.banners[banner.type] = {pulls: [], lastPullDate: 0}
                                             }
 
@@ -258,7 +258,7 @@
                                     }
 
                                     gacha.banners[banner.type].pulls = latestPulls.concat(gacha.banners[banner.type].pulls)
-                                    gacha.banners[banner.type].lastPullDate = gacha.banners[banner.type].pulls[0][1]
+                                    gacha.banners[banner.type].lastPullDate = gacha.banners[banner.type].pulls[0] ? gacha.banners[banner.type].pulls[0][1] : 0
                                 }
                             }
 
