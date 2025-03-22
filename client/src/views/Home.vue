@@ -7,6 +7,13 @@
                     <p><span class="text-highlight z-10">macchiato.app</span> currently includes a Gacha Counter, Gacha Calculator, and general game information for Girls' Frontline 2. Constantly kept up to date and new content added frequently.</p>
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">WELCOME</p>
                 </div>
+                <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
+                    <div class="w-full h-[8rem] overflow-hidden">
+                        <div ref="events" class="flex items-center" :style="{ 'width': `${events.length * 100}%` }">
+                            <img loading="lazy" class="w-[27rem]" v-for="event of events" :src="event">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="flex flex-col gap-5">
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative pt-8 gap-1">
@@ -21,22 +28,50 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="relative h-96 -z-10">
-            <img class="debris" src="/debris.webp" alt="debris">
-            <img class="splash" src="/splash.webp" alt="macchiato render">
-        </div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[30rem] translate-y-[calc(20vh-10vw)] -z-10 overflow-hidden">
+        <img class="debris" src="/debris.webp" alt="debris">
+        <img class="splash" src="/splash.webp" alt="macchiato render">
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                events: []
+            }
+        },
         methods: {
             redirect(route) {
                 this.$router.push({
                     path: route
                 })
+            },
+            async updateEvents() {
+                const response = await fetch("https://gf2-zoneinfo-intl.haoplay.com/banner?game_channel_id=10001&type_id=3&language=en").then(response => response.json())
+
+                if (response && response.data) {
+                    const events = response.data.map(event => event.pic_url)
+                    const [eventsWidth, eventsLength] = [100 / events.length, events.length]
+                    const keyframes = []
+
+                    for (const [i, event] of Object.entries(events)) {
+                        keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String(i / eventsLength)) })
+                        keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String((i / eventsLength) + 0.135)) })
+                    }
+
+                    keyframes[0].transform = "translateX(0%)"
+                    console.log(keyframes)
+
+                    this.events = events
+                    this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
+                }
             }
+        },
+        async mounted() {
+            await this.updateEvents()
         }
     }
 </script>

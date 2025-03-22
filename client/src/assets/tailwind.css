@@ -251,7 +251,7 @@ body:has(.banner:focus) .gacha-main {
 .splash {
     position: absolute;
     width: 100%;
-    top: 0;
+    bottom: 0;
     object-fit: contain;
     height: 30rem;
     right: 50%;
@@ -264,7 +264,7 @@ body:has(.banner:focus) .gacha-main {
     position: absolute;
     height: 100%;
     object-fit: contain;
-    top: 0;
+    bottom: 0;
     height: 30rem;
     right: 50%;
     transform: translateX(55%) translateY(-5%) scale(1.4) ;
