@@ -37,10 +37,14 @@
 </template>
 
 <script>
+    import { reactive } from 'vue'
+
+    var events = reactive([])
+
     export default {
         data() {
             return {
-                events: []
+                events: events
             }
         },
         methods: {
@@ -48,30 +52,29 @@
                 this.$router.push({
                     path: route
                 })
-            },
-            async updateEvents() {
-                const response = await fetch("https://gf2-zoneinfo-intl.haoplay.com/banner?game_channel_id=10001&type_id=3&language=en").then(response => response.json())
-
-                if (response && response.data) {
-                    const events = response.data.map(event => event.pic_url)
-                    const [eventsWidth, eventsLength] = [100 / events.length, events.length]
-                    const keyframes = []
-
-                    for (const [i, event] of Object.entries(events)) {
-                        keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String(i / eventsLength)) })
-                        keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String((i / eventsLength) + 0.135)) })
-                    }
-
-                    keyframes[0].transform = "translateX(0%)"
-                    console.log(keyframes)
-
-                    this.events = events
-                    this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
-                }
             }
         },
         async mounted() {
-            await this.updateEvents()
+            if (events.length == 0) {
+                const response = await fetch("https://gf2-zoneinfo-intl.haoplay.com/banner?game_channel_id=10001&type_id=3&language=en").then(response => response.json())
+
+                if (response && response.data) {
+                    events = response.data.map(event => event.pic_url)
+                    this.events = events
+                }
+            }
+
+            const [eventsWidth, eventsLength] = [100 / events.length, events.length]
+            const keyframes = []
+
+            for (const [i, event] of Object.entries(events)) {
+                keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String(i / eventsLength)) })
+                keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String((i / eventsLength) + 0.135)) })
+            }
+
+            keyframes[0].transform = "translateX(0%)"
+
+            this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
         }
     }
 </script>
