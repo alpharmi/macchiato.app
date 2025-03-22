@@ -13,7 +13,7 @@
     <p>macchiato.app</p>
     <p>Girls' Frontline 2: Exilium and content are trademarks and copyright of SUNBORN Information or MicaTeam.</p>
     <div class="flex items-center gap-3 pt-1">
-        <button @click="redirect('/privacy-policy')" class="text-highlight"><a>Privacy Policy</a></button>
+        <button @click="redirect('/privacy-policy')" class="text-highlight link">Privacy Policy</button>
         <div class="flex h-5">
             <a class="!border-none !pb-0" href="https://github.com/alpharmi/macchiato.app"><img class="h-full" src="/github.webp"></a>
         </div>

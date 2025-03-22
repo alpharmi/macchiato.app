@@ -10,7 +10,7 @@
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
                     <div class="w-full h-[8rem] overflow-hidden">
                         <div ref="events" class="flex items-center" :style="{ 'width': `${events.length * 100}%` }">
-                            <img loading="lazy" class="w-[27rem]" v-for="event of events" :src="event">
+                            <img fetchpriority="low" loading="lazy" class="w-[27rem]" alt="event" v-for="event of events" :src="event">
                         </div>
                     </div>
                 </div>

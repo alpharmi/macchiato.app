@@ -163,13 +163,13 @@ input::-webkit-inner-spin-button {
     content: '';
 }
 
-a {
+a, .link {
     color: var(--highlight);
     width: max-content;
     padding-bottom: 1px;
 }
 
-a:hover {
+a:hover, .link:hover {
     border-bottom: 1px var(--highlight) solid;
     padding-bottom: 0px;
     filter: brightness(125%);
