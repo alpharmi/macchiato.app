@@ -15,7 +15,7 @@
     <div class="flex items-center gap-3 pt-1">
         <button @click="redirect('/privacy-policy')" class="text-highlight link">Privacy Policy</button>
         <div class="flex h-5">
-            <a class="!border-none !pb-0" href="https://github.com/alpharmi/macchiato.app"><img class="h-full" src="/github.webp"></a>
+            <a class="!border-none !pb-0" href="https://github.com/alpharmi/macchiato.app"><img class="h-full" src="/github.webp" alt="github"></a>
         </div>
     </div>
   </footer>

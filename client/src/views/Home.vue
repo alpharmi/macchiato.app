@@ -8,9 +8,11 @@
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">WELCOME</p>
                 </div>
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
-                    <div class="w-full h-[8rem] overflow-hidden">
-                        <div ref="events" class="flex items-center" :style="{ 'width': `${events.length * 100}%` }">
-                            <img fetchpriority="low" loading="lazy" class="w-[27rem]" alt="event" v-for="event of events" :src="event">
+                    <div class="w-full h-full relative overflow-hidden">
+                        <div class="absolute left-0 top-0 overflow-hidden">
+                            <div ref="events" class="flex" :style="{ 'width': `${events.length * 27}rem` }">
+                                <img fetchpriority="low" loading="lazy" class="w-[27rem]" alt="event" v-for="event of events" :src="event">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,8 +73,6 @@
                 keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String(i / eventsLength)) })
                 keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String((i / eventsLength) + 0.135)) })
             }
-
-            keyframes[0].transform = "translateX(0%)"
 
             this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
         }
