@@ -102,7 +102,7 @@
             </div>
             <div class="w-full flex justify-end mb-3">
                 <div class="flex items-center justify-center gap-2">
-                    <img class="w-12" src="/macchiato_sticker.webp">
+                    <img class="w-12" src="/macchiato_sticker.webp" alt="macchiato_sticker">
                     <div class="flex flex-col">
                         <p>Want to help add characters?</p>
                         <p>Contribute on <a href="https://github.com/alpharmi/macchiato.app">GitHub</a></p>
