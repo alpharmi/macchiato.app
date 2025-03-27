@@ -5,7 +5,8 @@ module.exports = {
     screens: {
       "md": {"max": "1370px"},
       "sm": {"max": "700px"},
-      "mb": {"max": "450px"}
+      "mb": {"max": "450px"},
+      "homeWrap": {"min": "785px", "max": "1015px"}
     },
     fontFamily: {
       "harmony": ["Harmony Sans", "sans-serif"]
@@ -18,9 +19,16 @@ module.exports = {
         "text": "var(--text)",
         "highlight": "var(--highlight)",
         "description": "var(--description)",
+
         "ssr": "var(--ssr)",
         "sr": "var(--sr)",
-        "r": "var(--r)"
+        "r": "var(--r)",
+
+        "burn": "var(--burn)",
+        "hydro": "var(--hydro)",
+        "freeze": "var(--freeze)",
+        "electric": "var(--electric)",
+        "corrosion": "var(--corrosion)"
       }
     },
   },

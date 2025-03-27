@@ -8,12 +8,16 @@ import Gacha from "./views/Gacha.vue"
 import Import from './views/Import.vue'
 import Calculator from './views/Calculator.vue'
 import PrivacyPolicy from './views/PrivacyPolicy.vue'
+import Characters from './views/Characters.vue'
+import Character from './views/Character.vue'
 
 const routes = [
     { path: "", component: Home },
     { path: "/gacha", component: Gacha },
     { path: "/gacha/import", component: Import},
     { path: "/calculator", component: Calculator },
+    { path: "/characters", component: Characters },
+    { path: "/characters/:name", component: Character },
     { path: "/privacy-policy", component: PrivacyPolicy }
 ]
 

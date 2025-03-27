@@ -4,12 +4,12 @@
             <div class="flex flex-col gap-5">
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Welcome</p>
-                    <p><span class="text-highlight z-10">macchiato.app</span> currently includes a Gacha Counter, Gacha Calculator, and general game information for Girls' Frontline 2. Constantly kept up to date and new content added frequently.</p>
+                    <p><span class="text-highlight z-10">macchiato.app</span> currently includes a Gacha Counter, Gacha Calculator, Character Guides & Builds, and general game information for Girls' Frontline 2. Constantly kept up to date and new content added frequently.</p>
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">WELCOME</p>
                 </div>
                 <div class="main-container max-w-[28rem] min-h-[9rem] flex flex-col p-2 relative">
                     <div class="w-full h-full relative overflow-hidden">
-                        <div class="absolute left-0 top-0 overflow-hidden">
+                        <div class="absolute left-0 -top-2 overflow-hidden">
                             <div ref="events" class="flex" :style="{ 'width': `${events.length * 27}rem` }">
                                 <img fetchpriority="low" loading="lazy" class="w-[27rem]" alt="event" v-for="event of events" :src="event">
                             </div>
@@ -27,6 +27,13 @@
                     <p>Calculate the chance of getting a SSR in your next pull, how far you are from soft pity, how much you earn from dailies, and much more.</p>
                     <button @click="redirect('/calculator')" class="button w-max inline-image"><img src="/items/collapse_piece.webp" alt="item"> Gacha Calculator</button>
                     <p class="absolute font-black right-0 bottom-0 text-7xl opacity-[0.02]">CALC</p>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-5 homeWrap:min-w-[28rem] sm:min-w-max">
+                <div class="main-container w-[14rem] min-h-[9rem] relative">
+                    <img class="absolute z-20 w-36 -top-7 pointer-events-none" src="/characters_overlay.webp" alt="klukai">
+                    <img class="absolute w-[11rem] -top-8 -right-11 pointer-events-none" src="/characters_background.webp" alt="makkiato">
+                    <button @click="redirect('/characters')" class="button !absolute left-10 bottom-5 w-max inline-image !pl-10 shadow-lg">Characters</button>
                 </div>
             </div>
         </div>
@@ -74,7 +81,9 @@
                 keyframes.push({ transform: `translateX(-${eventsWidth * i}%)`, offset: Number(String((i / eventsLength) + 0.135)) })
             }
 
-            this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
+            if (this.$refs.events) {
+                this.$refs.events.animate(keyframes, { duration: 50000, iterations: Infinity })
+            }
         }
     }
 </script>

@@ -4,6 +4,7 @@
         "id": 1039,
         "item": "character",
         "rarity": "ssr",
+        "element": "freeze",
         "weapon": "smg",
         "role": "support",
         "roleDescriptions": ["heal_&_stability_regen", "shield"]
@@ -22,6 +23,7 @@
         "id": 1034,
         "item": "character",
         "rarity": "ssr",
+        "element": "freeze",
         "weapon": "rf",
         "role": "sentinel",
         "roleDescriptions": ["single_target_damage", "preemptive_counterattack"]
@@ -40,6 +42,7 @@
         "id": 1023,
         "item": "character",
         "rarity": "ssr",
+        "element": "freeze",
         "weapon": "rf",
         "role": "support",
         "roleDescriptions": ["mapwide_buffs", "tile", "assist"]
@@ -49,6 +52,7 @@
         "id": 1028,
         "item": "character",
         "rarity": "ssr",
+        "element": "burn",
         "weapon": "ar",
         "role": "support",
         "roleDescriptions": ["heal_&_stability_regen", "assist", "buff"]
@@ -58,15 +62,165 @@
         "id": 1052,
         "item": "character",
         "rarity": "ssr",
+        "element": "corrosion",
         "weapon": "ar",
         "role": "sentinel",
         "roleDescriptions": ["wide_area", "debuff", "stack"]
+    },
+    {
+        "name": "andoirs",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "electric",
+        "weapon": "ar",
+        "role": "bulwark",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "belka",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "electric",
+        "weapon": "ar",
+        "role": "vanguard",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "faye",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "hg",
+        "role": "vanguard",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "jiangyu",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "electric",
+        "weapon": "ar",
+        "role": "sentinel",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "lenna",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "electric",
+        "weapon": "smg",
+        "role": "support",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "leva",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "electric",
+        "weapon": "smg",
+        "role": "sentinel",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "mechty",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "corrosion",
+        "weapon": "ar",
+        "role": "support",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "nikketa",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "hydro",
+        "weapon": "rf",
+        "role": "sentinel",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "papasha",
+        "id": 1040,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "corrosion",
+        "weapon": "smg",
+        "role": "sentinel",
+        "roleDescriptions": ["single_target_burst", "summon"]
+    },
+    {
+        "name": "peri",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "burn",
+        "weapon": "smg",
+        "role": "bulwark",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "qiuhua",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "burn",
+        "weapon": "sg",
+        "role": "vanguard",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "springfield",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "hydro",
+        "weapon": "rf",
+        "role": "support",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "vector",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "burn",
+        "weapon": "smg",
+        "role": "support",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "yoohee",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "support",
+        "roleDescriptions": ["", "", ""]
+    },
+    {
+        "name": "zhaohui",
+        "id": -1,
+        "item": "character",
+        "rarity": "ssr",
+        "element": "hydro",
+        "weapon": "smg",
+        "role": "vanguard",
+        "roleDescriptions": ["", "", ""]
     },
     {
         "name": "mosin-nagant",
         "id": 1033,
         "item": "character",
         "rarity": "ssr",
+        "element": "electric",
         "weapon": "rf",
         "standard": true,
         "role": "sentinel",
@@ -77,6 +231,7 @@
         "id": 1021,
         "item": "character",
         "rarity": "ssr",
+        "element": "corrosion",
         "weapon": "mg",
         "standard": true,
         "role": "sentinel",
@@ -87,6 +242,7 @@
         "id": 1027,
         "item": "character",
         "rarity": "ssr",
+        "element": "burn",
         "weapon": "ar",
         "standard": true,
         "role": "sentinel",
@@ -97,6 +253,7 @@
         "id": 1029,
         "item": "character",
         "rarity": "ssr",
+        "element": "hydro",
         "weapon": "sg",
         "standard": true,
         "role": "bulwark",
@@ -117,6 +274,7 @@
         "id": 1025,
         "item": "character",
         "rarity": "ssr",
+        "element": "hydro",
         "weapon": "ar",
         "standard": true,
         "role": "sentinel",
@@ -127,6 +285,7 @@
         "id": 1024,
         "item": "character",
         "rarity": "sr",
+        "element": "burn",
         "weapon": "smg",
         "role": "support",
         "roleDescriptions": ["random_buff", "assist", "heal"]
@@ -136,6 +295,7 @@
         "id": 1009,
         "item": "character",
         "rarity": "sr",
+        "element": "hydro",
         "weapon": "hg",
         "role": "support",
         "roleDescriptions": ["heal_&_stability_regen", "assist"]
@@ -154,6 +314,7 @@
         "id": 1001,
         "item": "character",
         "rarity": "sr",
+        "element": "burn",
         "weapon": "bld",
         "role": "vanguard",
         "roleDescriptions": ["melee_damage", "debuff"]
@@ -163,6 +324,7 @@
         "id": 1036,
         "item": "character",
         "rarity": "sr",
+        "element": "burn",
         "weapon": "hg",
         "role": "support",
         "roleDescriptions": ["heal_&_stability_regen", "buff"]
@@ -172,6 +334,7 @@
         "id": 1038,
         "item": "character",
         "rarity": "sr",
+        "element": "burn",
         "weapon": "mg",
         "role": "sentinel",
         "roleDescriptions": ["aoe_damage", "pursuit"]
@@ -181,6 +344,7 @@
         "id": 1041,
         "item": "character",
         "rarity": "sr",
+        "element": "freeze",
         "weapon": "sg",
         "role": "sentinel",
         "roleDescriptions": ["aoe_damage", "debuff", "assist"]
@@ -190,6 +354,7 @@
         "id": 1026,
         "item": "character",
         "rarity": "sr",
+        "element": "corrosion",
         "weapon": "hg",
         "role": "support",
         "roleDescriptions": ["single_target_debuff", "pursuit"]
@@ -199,6 +364,7 @@
         "id": 1008,
         "item": "character",
         "rarity": "sr",
+        "element": "corrosion",
         "weapon": "rf",
         "role": "sentinel",
         "roleDescriptions": ["single_target_damage", "assist"]
@@ -208,6 +374,7 @@
         "id": 1022,
         "item": "character",
         "rarity": "sr",
+        "element": "burn",
         "weapon": "ar",
         "role": "sentinel",
         "roleDescriptions": ["single_target_damage", "debuff"]

@@ -1,0 +1,274 @@
+{
+    "makiatto": {
+        "name": "makiatto", 
+        "rarity": "ssr", 
+        "element": "freeze", 
+        "weapon": "rf", 
+        "role": "sentinel", 
+        "roleDescriptions": ["single_target_damage", "first_strike"],
+        "affiliation": "Zucchero Café", 
+        "signature": "bittersweet_caramel",
+        "weapons": ["eulogistic_verse", ["walther_wa2000", "Walther WA2000"]],
+        "attachments": {"sets": ["ice_boost", "phase_strike"], "subStats": ["Crit DMG%", "ATK%", "ATK", "Crit HIT%"]},
+        "description": "Makiatto is a SSR Sniper Rifle user that priortises dealing single-target DPS while intercepting enemies' attacks. She's very flexiable and fits into many different teams.",
+        "voiceActors": {"jp": ["戸松 遥", "Haruka Tomatsu"], "cn": ["謝莹", "Xie Ying"], "kr": ["이명호", "Lee Myeongho"]},
+        "skills": {
+            "basic_attack": {
+                "name": "lone_wolf_territory",
+                "stats": {"cooldown": 0, "confectance_points": 0, "stability_damage": 2},
+                "description": "Selects 1 enemy target within <hl>9 tiles</hl> and deals physical damage equal to <hl>80%</hl> of attack to them.",
+                "quote": "Annoyances, get lost!",
+                "image_overwrite": "sniper_rifle"
+            },
+            "skill_1": {
+                "name": "cold_precision_shot",
+                "stats": {"cooldown": 0, "confectance_points": 2, "stability_damage": 1},
+                "description": "Selects 1 enemy target within <hl>9 tiles</hl> and deals <el freeze>Freeze damage</el> equal to <hl>160%</hl> of attack. Increases the critical damage of this attack by <hl>30%.</hl> Gains <hl>1 stack</hl> of <ef>Cold Conviction</ef> for each instance of damage dealt.",
+                "quote": "Pull the trigger with absolute confidence in victory!",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 1, 
+                        "description": "Perform two attacks, critical damage will no longer increase, and the damage dealt is decreased to 100% of attack. If the first attack crits, the critical rate of the second attack is increased by 100%, and the critical damage is increased by 80%."
+                    }
+                ]
+            },
+            "skill_2": {
+                "name": "professional_tactics",
+                "stats": {"cooldown": 3, "confectance_points": 0, "stability_damage": 2},
+                "description": "Select 1 enemy target within <hl>9 tiles</hl> of self, deal physical damage equal to <hl>130%</hl> of attack, gain <hl>4 points</hl> of Confectance Index, and gain <hl>2 stacks</hl> of <ef>Standard Approach</ef>.",
+                "quote": "Understanding how to deliver a lethal blow and excelling at remaining hidden demonstrates professionalism.",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 4, 
+                        "description": "Change Standard Approach to Emergency Plan."
+                    }
+                ]
+            },
+            "ultimate": {
+                "name": "absolute_mental_defense",
+                "stats": {"cooldown": 3, "confectance_points": 0, "stability_damage": 0},
+                "description": "Gains <el>Frost Barrier</el> and <el>Alert</el> for <hl>2 turns</el>. The absorption amount of <el>Frost Barrier</el> is equal to <hl>65%</hl> of the initial attack, but cannot exceed <hl>60%</hl> of max HP.",
+                "quote": "D-Don't barge into someone's personal space!",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 2, 
+                        "description": "The absorption amount of Frost Barrier is increased to 80% of this unit's initial attack, and the cap is increased to 80% of max HP. The number of Interception triggered is increased by 1 time per turn."
+                    },
+                    {
+                        "fortification": 6, 
+                        "description": "The absorption amount of Frost Barrier is increased to 80% of this unit's initial attack, and the cap is increased to 80% of max HP. The number of Interception triggered is increased by 1 time per turn. After using Absolute Mental Defense, gains 2 points of Confectance Index at the end of the action. This effect can be triggered 2 times. Interception can be triggered once more each turn. If the Interception deals a critical hit, gains Rapture for 1 turn."
+                    }
+                ]
+            },
+            "passive": {
+                "name": "battlefield_insight",
+                "stats": {"cooldown": 0, "confectance_points": 0, "stability_damage": 0},
+                "description": "Increases critical rate by <hl>40%</hl> and reduces critical damage by <hl>10%</hl>. At the start of the turn, if this unit's HP exceeds <hl>80%</hl>, gains <ef>Insight</ef> and <ef>Steady Progress</ef> until the next turn. When attacking a target with <ef>Frozen</ef>, ignores <hl>4 points</hl> of stability index and increases damage dealt to them by <hl>20%</hl>. When attacking a target with <ef>Frigid</ef>, ignores <hl>6 points</hl> of stability index and increases damage dealt to them by <hl>30%</hl>. These effects cannot stack.",
+                "quote": "Well, it's full of shortcomings!",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 3, 
+                        "description": "When dealing Freeze damage to an enemy target with Frozen, increases the stability index ignored to 6 points. When dealing Freeze damage to an enemy target with Frigid, increases stability index ignored to 10 points."
+                    },
+                    {
+                        "fortification": 5, 
+                        "description": "When dealing Freeze damage to an enemy target with Frozen, increases the stability index ignored to 6 points. When dealing Freeze damage to an enemy target with Frigid, increases stability index ignored to 10 points. When dealing Freeze damage to an enemy target with Frozen or Frigid, increases the stability index ignored to 10 points and damage dealt by 30%."
+                    }
+                ]
+            }
+        },
+        "nodes": [
+            {
+                "level": 20,
+                "keys": [
+                    {
+                        "name": "Additional Intelligence",
+                        "type": "fixed",
+                        "description": "When the active skill <hl>Cold Precision Shot</hl> results in a kill, gains <hl>1</hl> point of Confectance Index."
+                    },
+                    {
+                        "name": "Iced with Milk Foam",
+                        "type": "fixed",
+                        "description": "Gain <hl>3 points</hl> of Confectance Index at the start of the battle."
+                    }
+                ]
+            },
+            {
+                "level": 30,
+                "keys": [
+                    {
+                        "name": "Indomitable Lone Wolf",
+                        "type": "fixed",
+                        "description": "After using the active skill <hl>Professional Tactics</hl>, if there are no other allied units within <hl>3 tiles</hl>, gains <hl>1 stack</hl> of <ef>Lone Wolf</ef>."
+                    },
+                    {
+                        "name": "Time for a Break",
+                        "type": "fixed",
+                        "description": "When using <hl>Lone Wolf Territory</hl>, <hl>Cold Precision</hl>, or <hl>Professional Tactics</hl> over a <el freeze>Freeze</el> tile, cleanses all <el freeze>Freeze</el> debuffs from self and gains <hl>3 tiles</hl> of <ef>Additional Movement</ef>."
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "keys": [
+                    {
+                        "name": "Heated Caramel",
+                        "type": "fixed",
+                        "description": "At the start of the battle, applies <ef>Murderous Intent</ef> to the enemy unit with the highest HP."
+                    },
+                    {
+                        "name": "Absolute Concentration",
+                        "type": "fixed",
+                        "description": "Increases attack by <hl>10%</hl> at the start of the battle. This effect lasts until HP drops below <hl>100%</hl> for the first time."
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "keys": [
+                    {
+                        "name": "Survival Instinct",
+                        "type": "common",
+                        "description": "At the start of the action, if own HP is greater than <hl>80%</hl>, reduces stability damage taken from attacks by <hl>2 points</hl>. This can trigger at most <hl>once</hl> per turn."
+                    }
+                ]
+            }
+        ]
+    },
+    "klukai": {
+        "name": "klukai", 
+        "rarity": "ssr", 
+        "element": "corrosion", 
+        "weapon": "ar", 
+        "role": "sentinel", 
+        "roleDescriptions": ["wide_ara", "debuff", "stack"],
+        "affiliation": "H.I.D.E 404", 
+        "signature": "skylla",
+        "weapons": ["planeta", "416"],
+        "attachments": {"sets": ["corrosion_boost", "phase_strike"], "subStats": ["ATK%", "ATK", "Crit DMG%", "Crit HIT%"]},
+        "description": "Klukai is a SSR Assault Rifle user that specialises in dealing AOE damage. She can easily breeze through majority of enemies.",
+        "voiceActors": {"jp": ["野中 藍", "Nonaka Ai"], "cn": ["钟可", "Zhong Ke"], "kr": ["정채연", "Jang Chaeyeon"]},
+        "skills": {
+            "basic_attack": {
+                "name": "swift_strike",
+                "stats": {"cooldown": 0, "confectance_points": 0, "stability_damage": 3},
+                "description": "Select 1 enemy target within <hl>8 tiles</hl> and deal Physical damage equal to <hl>80%</hl> of your attack power.",
+                "quote": "An elite acts without hesitation.",
+                "image_overwrite": "assault_rifle"
+            },
+            "skill_1": {
+                "name": "pinpoint_detonation",
+                "stats": {"cooldown": 0, "confectance_points": 3, "stability_damage": 3},
+                "description": "Select 1 enemy target within <hl>8 tiles</hl> and deal AoE <el corrosion>Corrosion damage</el> equal to <hl80%</hl> of your attack power. Additionally, perform an extra attack that deals AoE <el corrosion>Corrosion damage</el> equal to <hl>60%</hl> of your attack power to the target and all enemy targets within <hl>3 tiles</hl>, pulling all targets <hl>1 tile</hl> toward the center.\nIf any kill is made, the cooldown of your Ultimate <hl>Crushing Drift</hl> is reduced by <hl>1 turn</hl>, and you gain <hl>2 points</hl> of Confectance Index. If no kill is made, apply <hl>1 stack</hl> of <ef>Corrosive Infusion</ef> to the target, lasting <hl>2 turns</hl>.",
+                "quote": "Make use of everything on the battlefield, for better or worse.",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 4, 
+                        "description": "The first attack deals damage equal to 100% of your attack power. When performing the additional attack, for each stack of Corrosive Infusion on the target, the damage coefficient increases by 5%. If a weakness is generated, the attack ignores 15% of the target’s cover damage reduction."
+                    }
+                ]
+            },
+            "skill_2": {
+                "name": "overpowering_corrosion",
+                "stats": {"cooldown": 0, "confectance_points": 3, "stability_damage": 1},
+                "description": "Select <hl>1 tile</hl> within <hl>8 tiles</hl> and deal AoE <el corrosion>Corrosion damage</el> equal to <hl>90%</hl> of your attack power to all enemy targets within <hl>3 tiles</hl>, applying <ef>Toxic Infiltration</ef>, lasting <hl>2 turns</hl>. For targets already affected by <ef>Toxic Infiltration</ef>, damage is increased by <hl>15%</hl>.",
+                "quote": "To crush all action and will; that is true strength.",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 1, 
+                        "description": "For targets already affected by Toxic Infiltration, additional damage is increased to 30%. If the target does not die, it still triggers the Toxic Infiltration death effect. Toxic Infiltration also applies a new effect: at the end of the turn, the user applies Toxic Infiltration, lasting 2 turns, to all enemy units within 3 tiles that are not affected by Toxic Infiltration."
+                    },
+                    {
+                        "fortification": 5, 
+                        "description": "The effect range increases by 2 tiles, and the damage is increased to 110% of your attack power. The spread range of Toxic Infiltration increases by 1 tile, and the damage increases to 80% of your attack power. If the target has an Corrosion debuff, apply Toxic Infiltration to the target before the attack, lasting 2 turns. Toxic Infiltration has a new effect: when affected by the user's Active Skill, the target takes 30% more damage."
+                    }
+                ]
+            },
+            "ultimate": {
+                "name": "devastating_drift",
+                "stats": {"cooldown": 6, "confectance_points": 0, "stability_damage": 0},
+                "description": "Select <hl>1 tile</hl> within a cross-shaped area from <hl>4 to 8 tiles</hl>, drop to that tile, and deal AoE <el corrosion>Corrosion damage</el> equal to <hl>100%</hl> of your attack power to all enemy targets within a <hl>5-tile</hl> wide path, gaining <hl>6 tiles</hl> of <ef>Additional Movement</ef>. If <hl>2 or more</hl> targets are killed, you can use this skill again, up to <hl>1 time</hl>.",
+                "quote": "A fusion of weight and grace. A thunderous song of battle.",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 3, 
+                        "description": "Each enemy target hit increases damage by 10%, up to 50%. If the target is a boss, damage is directly increased by 50%. If 2 or more targets or a boss are hit, you can use this skill again. Before attacking, apply Defense Down II and Toxic Infiltration to the target, lasting 2 turns."
+                    },
+                    {
+                        "fortification": 6, 
+                        "description": "Ignores Cover damage reduction. The width increases by 2 tiles, and the target is inflicted with Terror, lasting 2 turns. After attacking, trigger the Corrosive Infusion effect for all enemy units on the field, as well as the death effect of Toxic Infiltration."
+                    }
+                ]
+            },
+            "passive": {
+                "name": "elite's_pride",
+                "stats": {"cooldown": 0, "confectance_points": 0, "stability_damage": 0},
+                "description": "The user is immune to <ef>Control Effects</ef>. When performing an Active Skill that causes damage, apply <hl>1 stack</hl> of <ef>Corrosive Infusion</ef> to the target, lasting <hl>2 turns</hl>, and gain <hl>1 stack</hl> of <ef>Competitive Spirit</ef>.\nWhen the user or other allies perform <el corrosion>Corrosion attacks<el>, the user gains <hl>1 point</hl> of Confectance Index for each damage dealt. Every <hl>3 points</hl> of Confectance Index reduces the cooldown of the Ultimate by <hl>1 turn</hl>.",
+                "quote": "Step by step, victory will be firmly within our grasp.",
+                "levels": [{ "fortification": 0 },
+                    {
+                        "fortification": 2, 
+                        "description": "At the start of combat, gain 3 stacks of Competitive Spirit. Other allies dealing Corrosion damage also grants 1 stack of Competitive Spirit to Klukay. The Competitive Spirit stack limit increases by 4 stacks. For every 3 points of Confectance Index, apply 1 additional stack of Corrosive Infusion to enemies who have Corrosive Infusion , and reduce the Ultimate's cooldown by 1 additional turn. Corrosive Infusion also has a new effect: when the user or other allies deal Corrosion damage, apply an additional stack of Corrosive Infusion to targets with Corrosive Infusion . The target’s defense is reduced by 1%, and the stack limit increases by 5 stacks."
+                    }
+                ]
+            }
+        },
+        "nodes": [
+            {
+                "level": 20,
+                "keys": [
+                    {
+                        "name": "Deadly Entwine",
+                        "type": "fixed",
+                        "description": "At the start of the turn, if there is only one enemy target, applies <hl>1 stack</hl> of <ef>Corrosive Infusion</ef> to them for <hl>2 turns</hl>. Additionally, gains <hl>2 points</hl> of Confectance Index."
+                    },
+                    {
+                        "name": "One Fell Swoop",
+                        "type": "fixed",
+                        "description": "If the Ultimate skill <hl>Devastating Drift</hl> only hits <hl>1 target</hl>, increases the damage dealt by <hl>30%</hl>."
+                    }
+                ]
+            },
+            {
+                "level": 30,
+                "keys": [
+                    {
+                        "name": "No Mercy",
+                        "type": "fixed",
+                        "description": "<ef>Corrosive Infusion</ef> gains a new effect, it increases damage to targets in Stability Break by <hl>15%</hl>."
+                    },
+                    {
+                        "name": "Strong Support",
+                        "type": "fixed",
+                        "description": "For every Support Attack performed by other allied units, gains <hl>1 point</hl> of Confectance Index."
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "keys": [
+                    {
+                        "name": "Limit Break",
+                        "type": "fixed",
+                        "description": "Reduces thhe width of the Ultimate skill <hl>Devastating Drift's</hl> effective area to <hl>3 tiles</hl>. For each tile reduced, increases damage dealt by <hl>10%</hl>."
+                    },
+                    {
+                        "name": "Moment of Doom",
+                        "type": "fixed",
+                        "description": "After the unit(s) afflicted with <ef>Toxic Infiltration</ef> take damage from its effect and survive, they are inflicted with <hl>1 stack</hl> of <ef>Corrosive Infusion</ef> for <hl>2 turns</hl>."
+                    }
+                ]
+            },
+            {
+                "level": 40,
+                "keys": [
+                    {
+                        "name": "Murderous Return",
+                        "type": "common",
+                        "description": "Attack Boost <hl>+5.0%</hl> At the start of the turn, if the user's Confectance Index is full, the next instance of AoE damage inflicted by an active attack is increased by <hl>10%.</hl>"
+                    }
+                ]
+            }
+        ]
+    }
+}
