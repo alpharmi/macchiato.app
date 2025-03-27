@@ -64,7 +64,7 @@ Nodes are split into groups by character levels; `20`, `30`, and `40` like in-ga
 
 Each node includes two keys, one above, and one below. Currently each character only has one common key so that will take an entire node.
 
-Key description formatting also uses the [tags](##tags) as referenced before for skill descriptions.
+Key description formatting also uses the [tags](#tags) as referenced before for skill descriptions.
 
 | key | value | note |
 | --- | --- | --- |
