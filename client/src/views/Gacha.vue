@@ -1,5 +1,5 @@
 <template>
-    <Hint message="Mobile UI change will be released soon.,More features and info coming soon."/>
+    <Hint message="More features and info coming soon."/>
 
     <div class="w-full h-full flex justify-center pt-10 gap-14 mb:flex-wrap mb:flex-col">
         <div class="w-40 flex flex-col mb:flex-row mb:items-center mb:justify-center mb:w-full flex-wrap gap-2">
@@ -26,11 +26,11 @@
             </div>
 
             <div class="flex flex-wrap sm:justify-center w-full gap-8">
-                <div class="flex flex-col sm:flex-col md:flex-row gap-8">
+                <div class="flex flex-col sm:flex-col md:flex-row gap-8 sm:flex-grow">
                     <div class="min-w-[19rem] h-[17.5rem] flex flex-col gap-5">
                         <div class="main-container h-20 relative">
                             <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Lifetime Pulls</p>
-                            <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].total }}</p>
+                            <p :class="gacha.banners[bannerFocused.type].total > 999 ? 'text-[1.7rem]' : ''" class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].total }}</p>
                             <p class="absolute w-20 text-center left-2 top-8 text-xl text-description z-10 inline-image"><img src="/items/collapse_piece.webp"> {{ (gacha.banners[bannerFocused.type].total * 150).toLocaleString() }}</p>
                             <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
                         </div>
@@ -63,7 +63,7 @@
                                 <p>Pity Average: <span class="text-text font-bold">{{ gacha.banners[bannerFocused.type].stats.srAverage }}</span></p>
                             </div>
                         </div>
-                        <div class="w-[19rem] h-full px-4 pt-2 flex flex-wrap content-start overflow-y-auto mb-4">
+                        <div class="w-[19rem] sm:w-full h-full px-4 pt-2 flex justify-center flex-wrap content-start overflow-y-auto mb-4">
                             <div v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => pull[4] == 'ssr')" class="w-[3.9rem] h-[3.9rem] relative overflow-hidden">
                                 <img style="clip-path: polygon(10% 0, 100% 10%, 90% 100%, 0 85%)" :class="(pull[3] == 'weapon') ? 'pull-weapon !right-3': ''" class="absolute z-10 top-1 w-full scale-95 rounded-lg" :src="`/${pull[3]}s/${pull[1]}.webp`">
                                 <img class="absolute" src="/pull_background.webp">
@@ -73,15 +73,15 @@
                     </div>
                 </div>
 
-                <div class="main-container h-auto min-w-[38rem]">
+                <div class="main-container h-auto min-w-[38rem] sm:min-w-1">
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl">Pull History</p>
 
-                    <div class="px-5 flex-col w-full flex justify-center items-center">
+                    <div class="px-5 sm:px-1 flex-col w-full flex justify-center items-center">
                         <div class="flex gap-3">
                             <button v-for="[rarity, enabled] in Object.entries(filters.rarities)" @click="updateRarityFilter(rarity)" :class="(enabled) ? `gradient-${rarity} text-main !outline-none`: ''" class="selectable">{{ rarity.toUpperCase() }}</button>
                         </div>
 
-                        <div :class="(filters.amount > 20) ? 'overflow-y-scroll max-h-[59rem]': ''" class="w-[38rem] h-auto px-5 mt-5">
+                        <div :class="(filters.amount > 20) ? 'overflow-y-scroll max-h-[59rem]': ''" class="w-[38rem] sm:w-full h-auto px-5 sm:px-0 mt-5">
                             <table class="w-full">
                                 <tr class="text-description text-left">
                                     <th class="pl-8">Date</th>
@@ -89,9 +89,9 @@
                                     <th>Name</th>
                                 </tr>
                                 <tr v-for="pull in gacha.banners[bannerFocused.type].pulls.filter(pull => filters.rarities[pull[4]]).slice(0, filters.amount)" :class="`pull-${pull[4]}`" class="h-10 border-t border-[#2c3038]">
-                                    <th class="w-[12.5rem] pl-5 text-description">{{ pull[0] }}</th>
+                                    <th class="w-[12.5rem] sm:w-[5rem] pl-5 text-description">{{ pull[0] }}</th>
                                     <th><div class="flex justify-center">{{ pull[5] }}<Tooltip v-if="pull[6]" message="Guaranteed"><img class="w-2" src="/guaranteed.webp"></Tooltip></div></th>
-                                    <th class="text-left pl-2 flex items-center capitalize"><img :class="`pull-${pull[3]}`" class="w-10 h-10 mr-2" :src="`/${pull[3]}s/${pull[1]}.webp`">{{ pull[2] }}</th>
+                                    <th class="text-left pl-2 flex items-center sm:mt-1 capitalize"><img :class="`pull-${pull[3]}`" class="w-10 h-10 mr-2" :src="`/${pull[3]}s/${pull[1]}.webp`">{{ pull[2] }}</th>
                                 </tr>
                             </table>
                         </div>
