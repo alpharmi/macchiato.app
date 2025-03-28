@@ -26,6 +26,12 @@
     --ssr: #ffc75f;
     --sr: #ffabfc; 
     --r: #b9c6ff;
+
+    --burn: #f1705f;
+    --hydro: #73cef1;
+    --freeze: #a7f3ff;
+    --electric: #ffde67;
+    --corrosion: #ada2ff;
 }
 
 html {
@@ -49,6 +55,27 @@ body {
 .main-container {
     border-image: url("/main_container_border.webp") 10 / 1px / 3px repeat;
     background-color: var(--main);
+}
+
+.character-container {
+    background: url("/character_background.webp"), linear-gradient(to bottom, #c0c3c5 0%, #ADB2B5 100%);
+    background-size: 5rem;
+    background-position: center 2.5rem;
+    position: relative;
+}
+.character-container::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    backdrop-filter: blur(0.05rem);
+    background-image: url("/character_glow.webp");
+    background-position: center;
+}
+.character-container > img {
+    mask-image: linear-gradient(to bottom, #000 80%, #00000080);
 }
 
 .button {
@@ -193,6 +220,26 @@ a:hover, .link:hover {
 }
 .gradient-r {
     background: linear-gradient(180deg, #b9c6ff 0%, #a8b8ff 100%);
+}
+
+.element-burn {
+    background-color: var(--burn);
+}
+.element-hydro {
+    background-color: var(--hydro);
+}
+.element-freeze {
+    background-color: var(--freeze);
+}
+.element-electric {
+    background-color: var(--electric);
+}
+.element-corrosion {
+    background-color: var(--corrosion);
+}
+
+.gradient-transparent {
+    mask-image: linear-gradient(to bottom, #000 60%, #00000000);
 }
 
 .pull-ssr {

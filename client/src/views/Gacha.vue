@@ -18,7 +18,7 @@
                 <div class="flex items-center sm:justify-center gap-3 flex-wrap">
                     <p class="text-5xl font-black font-harmony-sans capitalize">{{ (bannerFocused.displayName || bannerFocused.name).replaceAll("_", " ") }}</p>
                     <div class="flex flex-wrap sm:justify-center gap-3">
-                        <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/roles/${labels[0]}.webp`"> {{ labels[0] }}</p>
+                        <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-[1.1rem] text-description h-8 w-max px-3 rounded-md capitalize inline-image"><img v-if="!(Number(labels[0].length) < 5)" :src="`/icons/${labels[0]}.webp`"> {{ labels[0] }}</p>
                         <p v-if="labels" :class="(labels[1].length > 35) ? 'text-[1.05rem]': 'text-xl'" class="bg-main-light text-description flex items-center h-8 w-max px-3 rounded-md capitalize">{{ labels[1] }}</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <div class="main-container h-20 relative">
                             <p class="font-bold bg-secondary w-max px-3 -translate-x-3 text-xl"><span class="gradient-ssr px-2 text-main">SSR</span> Pity</p>
                             <p class="absolute w-20 text-center right-8 top-[1.5rem] font-bold text-4xl text-main z-10">{{ gacha.banners[bannerFocused.type].pity.ssr }}</p>
-                            <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at 80</p>
+                            <p class="absolute w-max text-center left-2 top-8 text-md text-description z-10">Guaranteed at {{ bannerFocused.type == "character" ? '80' : '70' }}</p>
                             <img class="h-24 absolute right-5 -top-2" src="/pull_background.webp">
                         </div>
 
