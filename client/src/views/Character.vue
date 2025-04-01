@@ -8,7 +8,7 @@
                             <p :class="`gradient-${character.rarity}`" class="text-main font-bold text-2xl translate-y-0.5 !text-[1.6rem] px-3">{{ character.rarity.toUpperCase() }}</p>
                             <p class="text-main font-harmony font-black text-4xl h-min">{{ character.name }}</p>
                         </div>
-                        <img class="absolute w-full h-full drop-shadow-lg" src="/calculated_background.webp" alt="">
+                        <img :class="character.name.length > 8 ? 'scale-x-125' : ''" class="absolute w-full h-full drop-shadow-lg" src="/calculated_background.webp" alt="">
                     </div>
                     <img class="px-5 h-full object-cover" :src="`/charactersFull/${character.name}_small.webp`" :alt="character.name">
                 </div>
