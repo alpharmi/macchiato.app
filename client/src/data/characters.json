@@ -141,7 +141,7 @@
         "element": "corrosion", 
         "weapon": "ar", 
         "role": "sentinel", 
-        "roleDescriptions": ["wide_ara", "debuff", "stack"],
+        "roleDescriptions": ["wide_area", "debuff", "stack"],
         "affiliation": "H.I.D.E 404", 
         "signature": "skylla",
         "weapons": ["planeta", "416"],
@@ -268,6 +268,202 @@
                         "description": "Attack Boost <hl>+5.0%</hl> At the start of the turn, if the user's Confectance Index is full, the next instance of AoE damage inflicted by an active attack is increased by <hl>10%.</hl>"
                     }
                 ]
+            }
+        ]
+    },
+    "centaureissi": {
+        "name": "centaureissi",
+        "rarity": "ssr",
+        "element": "burn",
+        "weapon": "ar",
+        "role": "support",
+        "roleDescriptions": [
+            "heal_&_stability_regen",
+            "assist",
+            "buff"
+        ],
+        "affiliation": "Zucchero Café",
+        "signature": "maid's_rules",
+        "weapons": ["guerno", "maid's_rules", "sturmgewehr_36"],
+        "attachments": {
+            "sets": [
+                "emergency_repair",
+                "phase_strike"
+            ],
+            "subStats": [
+                "ATK%",
+                "ATK",
+                "HP%",
+                "HP"
+            ]
+        },
+        "description": "Centaureissi is a SSR Assault Rifle user. Acting as a 2 in 1 unit, she strongly focuses on defense as well as healing and buffing nearby teammates.",
+        "voiceActors": {
+            "jp": [
+                "小清水 亜美",
+                "Koshimizu Ami"
+            ],
+            "cn": [
+                "贺文潇",
+                "He Wenxiao"
+            ],
+            "kr": [
+                "김가령",
+                "Kim Garyung"
+            ]
+        },
+        "skills": {
+            "basic_attack": {
+                "name": "cleaning_time",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 0,
+                    "stability_damage": 3
+                },
+                "description": "Selects 1 target within <hl>7 tiles</hl>, dealing physical damage equal to <hl>80%</hl> of attack.",
+                "quote": "It's time for a thorough cleanupーlet's clear the battlefield of its grime.",
+                "image_overwrite": "assault_rifle"
+            },
+            "skill_1": {
+                "name": "careful_hospitality",
+                "stats": {
+                    "cooldown": 1,
+                    "confectance_points": 0,
+                    "stability_damage": 6
+                },
+                "description": "Selects 1 enemy target within <hl>7 tiles</hl> and deals <hl>Burn damage</hl> equal to <hl>130%</hl> of attack to them. After attacking, restores HP equal to <hl>100%</hl> of attack to the nearest allied target (excluding the user) and gains <ef>Heat Recovery</ef>. If the enemy target is inflicted with <ef>Overburn</ef>, heals 1 additional allied target.",
+                "quote": "Providing warm and thoughtful service is all in a day's work for a maid.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 3,
+                        "description": "If the user has Heat Recovery, gain Thermal Cycling."
+                    }
+                ]
+            },
+            "skill_2": {
+                "name": "zucchero's_special_drink",
+                "stats": {
+                    "cooldown": 2,
+                    "confectance_points": 0,
+                    "stability_damage": 3
+                },
+                "description": "Selects 1 allied target within <hl>7 tiles</hl>, restoring total HP equal to <hl>150%</hl> of attack to the target and all allied units within <hl>3 tiles</hl>. The healing is distributed evenly among all targets. Additionally, deals AoE physical damage equal to <hl>50%</hl> of attack to all enemies within range. If the enemy targets have <ef>Overburn</ef>, cleanses <hl>2</hl> of their buffs.",
+                "quote": "A classic signature cocktail is key to keeping customers coming back.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 5,
+                        "description": "Each allied target restores at least 75% of Centaureissi's attack as HP."
+                    }
+                ]
+            },
+            "ultimate": {
+                "name": "afternoon_tea_break",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 6,
+                    "stability_damage": 0
+                },
+                "description": "Restores HP equal to <hl>100%</hl> of attack to all allies, cleanses <hl>2</hl> debuffs, removes <ef>Fear</ef> and <ef>Stun</ef>, and restores up to <hl>7 points</hl> of stability index to the ally with the lowest stability index. After healing, applies <ef>Heat Recovery</ef>.",
+                "quote": "The sunlight is most pleasant in the afternoon; don't miss the opportune time for tea.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 4,
+                        "description": "The number of debuffs cleansed increases by 1, and removes Taunt, Fear, Infatuated and Stun."
+                    },
+                    {
+                        "fortification": 6,
+                        "description": "The number of debuffs cleansed increases by 1, and removes Taunt, Fear, Infatuated and Stun. Restore stability index for 2 allies with the lowest stability, then further increase it by 1 point."
+                    }
+                ]
+            },
+            "passive": {
+                "name": "maid's_duty",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 0,
+                    "stability_damage": 0
+                },
+                "description": "At the start of the battle, gains <ef>Heat Recovery</ef>. When the user is under the effects of <ef>Heat Recovery</ef>: Increases damage dealt by <hl>20%</hl>. When healing, additionally heals <hl>10%</hl> of the user's max HP. After active attacks, applies <ef>Overburn</ef> for <hl>2 turns</hl>. When an enemy unit within range receives targeted damage from an ally, prioritize performing <hl>1 instance</hl> of <ef>Action Support</ef>, dealing physical damage equal to <hl>80%</hl> of attack and <hl>3 points</hl> of stability damage to them, and applies <ef>Heat Recovery</ef> to the allied unit. Gains <hl>1 point</hl> of Confectance Index. This can be triggered up to <hl>2 times</hl> per turn.",
+                "quote": "It's a maid's duty to maintain the peace of the café.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 1,
+                        "description": "When Action Support is triggered, additionally applies Blazing Assault II and Damage Up II to the allied unit for 1 turn."
+                    },
+                    {
+                        "fortification": 2,
+                        "description": "When Action Support is triggered, additionally applies Blazing Assault II and Damage Up II to the allied unit for 1 turn. When Heat Recovery is active: Increases healing by 20% and damage dealt by 40%. If the healing target has Heat Recovery, the healing increase is raised to 50%; if the attack target has Overburn, the damage dealt is increased by 50%."
+                    }
+                ]
+            }
+        },
+        "nodes": [
+            {
+                "keys": [
+                    {
+                        "name": "Pre-Meal Dessert",
+                        "type": "fixed",
+                        "description": "Gains <hl>3 points</hl> of Confectance Index at the start of the battle."
+                    },
+                    {
+                        "name": "Maid's Resolve",
+                        "type": "fixed",
+                        "description": "If an allied unit within <hl>7 tiles</hl> enters Stability Break after taking damage, removes <ef>Heat Recovery</ef> from self and applies <ef>Heat Recovery</ef> to allied unit."
+                    }
+                ],
+                "level": 20
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Efficient Processing",
+                        "type": "fixed",
+                        "description": "When <ef>Heat Recovery</ef> is triggered, randomly cleanses <hl>1</hl> buff from the attacker. Before <ef>Heat Recovery</ef> is triggered, cleanses <hl>2</hl> debuffs from Centaureissi."
+                    },
+                    {
+                        "name": "Comforting Blend",
+                        "type": "fixed",
+                        "description": "Increases the healing multiplier of the active skill <hl>Zucchero's Special Drink</hl> <hl>75%</hl>."
+                    }
+                ],
+                "level": 30
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Thorough Preparation",
+                        "type": "fixed",
+                        "description": "When healing an allied target with an active skill, cleanses <hl>1</hl> debuff. For targets with <ef>Heat Recovery</ef>, cleanses <hl>1</hl> additional debuff."
+                    },
+                    {
+                        "name": "Lucky Menu",
+                        "type": "fixed",
+                        "description": "When healing an allied target with an active skill, if the target has <ef>Heat Recovery</ef>, randomly applies <hl>1</hl> powerful buff to them for <hl>1 turn</hl>."
+                    }
+                ],
+                "level": 40
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Essential Hot Beverages",
+                        "type": "common",
+                        "description": "Health Boost +5.0%. At the end of action, applies <ef>Heat Recovery</ef> to the closest allied unit without <ef>Heat Recovery</ef>. This effect has a <hl>2-turn</hl> cooldown."
+                    }
+                ],
+                "level": 40
             }
         ]
     }

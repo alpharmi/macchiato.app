@@ -415,8 +415,7 @@
         "type": "rf"
     },
     {
-        "name": "maids_rules",
-        "displayName": "Maid's Rules",
+        "name": "maid's_rules",
         "id": 11056,
         "item": "weapon",
         "rarity": "ssr",

@@ -10,7 +10,7 @@
                         </div>
                         <img class="absolute w-full h-full drop-shadow-lg" src="/calculated_background.webp" alt="">
                     </div>
-                    <img class="px-5 pt-3 h-full object-cover" :src="`/charactersFull/${character.name}_small.webp`" :alt="character.name">
+                    <img class="px-5 h-full object-cover" :src="`/charactersFull/${character.name}_small.webp`" :alt="character.name">
                 </div>
                 <div class="flex flex-col sm:w-full gap-2 pt-[4.7rem] sm:pt-0">
                     <div class="flex gap-2 flex-wrap sm:justify-center">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <p class="font-bold bg-secondary w-max px-3 -translate-x-3 mt-2">Best Attachment Sub-Stats</p>
-                    <div class="flex flex-wrap gap-1 content-center justify-center bg-main-light mx-2 h-[4.2rem] mt-2">
+                    <div class="flex flex-wrap gap-1 content-center justify-center bg-main-light mx-2 min-h-[4.2rem] h-full mt-2">
                         <p class="w-max" v-for="[i, subStat] in Object.entries(character.attachments.subStats)">{{ subStat }}<span v-if="!(i == character.attachments.subStats.length - 1)" class="text-description pl-1">></span></p>
                     </div>
                 </div>
