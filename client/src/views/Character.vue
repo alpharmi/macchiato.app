@@ -145,7 +145,8 @@
             }
         },
         async mounted() {
-            const characters = await fetch("/characters.json").then(response => response.json())
+            const characters = await fetch("/data/characters.json").then(response => response.json())
+            
             const characterName = this.$route.params.name
 
             if (characterName && characters[characterName]) {
