@@ -114,8 +114,6 @@
 </template>
 
 <script>
-    import characters from "../data/characters.json"
-
     /*
     for (const character of Object.values(characters)) {
         for (const skill of Object.values(character.skills)) {
@@ -146,13 +144,15 @@
                 return description
             }
         },
-        mounted() {
+        async mounted() {
+            const characters = await fetch("/data/characters.json").then(response => response.json())
+            
             const characterName = this.$route.params.name
 
             if (characterName && characters[characterName]) {
                 this.character = characters[characterName]
             } else {
-                this.$router.push({ path: "/characters" })
+                //this.$router.push({ path: "/characters" })
             }
         }
     }
