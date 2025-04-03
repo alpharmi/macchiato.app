@@ -184,7 +184,6 @@
             if (gacha && gacha.banners) {
                 const formatted = {}
 
-                //var i = 1
                 for (const [bannerType, banner] of Object.entries(gacha.banners)) {
                     formatted[bannerType] = {pulls: [], total: banner.pulls.length, pity: {ssr: 0, sr: 0}, stats: {ssrAverage: [], srAverage: [], ssrWinrate: []}}
 
@@ -221,14 +220,11 @@
                             }
 
                             if (!attainable.standard && guaranteed) {
-                                //formattedBanner.stats.ssrWinrate.push(0)
                                 pullFormatted.push(true)
                                 guaranteed = false
                             } else if (!attainable.standard && !guaranteed) {
                                 formattedBanner.stats.ssrWinrate.push(1)
                             }
-
-                            //formattedBanner.stats.ssrWinrate.push((guaranteed) ? 0: 1)
                         }
 
                         formattedBanner.pulls.push(pullFormatted)
@@ -238,10 +234,6 @@
                     formattedBanner.stats.srAverage = Math.floor(formattedBanner.stats.srAverage.reduce((a, b, _, pulls) => a + b / pulls.length, 0))
                     formattedBanner.stats.ssrAverage = Math.floor(formattedBanner.stats.ssrAverage.reduce((a, b, _, pulls) => a + b / pulls.length, 0))
                     formattedBanner.stats.ssrWinrate = formattedBanner.stats.ssrWinrate.reduce((a, b, _, pulls) => a + b / pulls.length, 0)
-                    //formattedBanner.stats.srAverage = Math.floor(formattedBanner.pulls.filter(pull => pull[4] == "sr").map(pull => pull[5]).reduce((a, b, _, pulls) => a + b / pulls.length, 0))
-                    //formattedBanner.stats.ssrAverage = Math.floor(formattedBanner.pulls.filter(pull => pull[4] == "ssr").map(pull => pull[5]).reduce((a, b, _, pulls) => a + b / pulls.length, 0))
-
-                    //console.log(formattedBanner)
                 }
 
                 gacha.banners = formatted

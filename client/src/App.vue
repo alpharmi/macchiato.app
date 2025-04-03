@@ -5,7 +5,6 @@
         <p class="text-2xl pl-1 sm:hidden"><span class="text-description">{{ currentRoute() }}</span></p>
         <button v-if="currentRoute()" @click="back()" class="h-full w-10 flex items-center justify-center"><img class="h-5 bg brightness-[0.7]" src="/return.webp" alt="back"></button>
     </div>
-    <a href="https://ko-fi.com/alpharmi" class="bg-secondary !p-2 !px-5 brightness-150 mr-5 sm:mr-2 flex inline-image group !text-text !border-none"><img class="group-hover:scale-110 transition-transform" src="/kofi.webp" alt=""><p>Buy us a Ko-Fi</p></a>
   </header>
 
   <main class="w-full h-max p-12 sm:p-3 sm:px-4 !pt-12 min-h-[calc(100vh-3.5rem)]">
