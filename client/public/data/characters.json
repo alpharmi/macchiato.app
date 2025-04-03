@@ -466,5 +466,198 @@
                 "level": 40
             }
         ]
+    },
+    "daiyan": {
+        "name": "daiyan",
+        "rarity": "ssr",
+        "weapon": "ar",
+        "role": "vanguard",
+        "roleDescriptions": [
+            "single_target_burst",
+            "first_strike"
+        ],
+        "signature": "heavy_strings",
+        "weapons": ["planeta", "type_95"],
+        "attachments": {
+            "sets": [
+                "Ballistic Boost",
+                "Phase Strike"
+            ],
+            "subStats": [
+                "ATK%",
+                "ATK",
+                "Crit HIT%",
+                "Crit DMG%"
+            ]
+        },
+        "description": "Daiyan is a SSR Assault Rifle user known for her high-mobility damage dealing, while providing stability shred and buff dispelling.",
+        "voiceActors": {
+            "jp": [
+                "田澤 茉純",
+                "Tazawa Masumi"
+            ],
+            "cn": [
+                "柳知萧",
+                "Liu Zhixiao"
+            ],
+            "kr": [
+                "사문영",
+                "Sa Moonyoung"
+            ]
+        },
+        "skills": {
+            "basic_attack": {
+                "name": "plucking_strings",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 0,
+                    "stability_damage": 1
+                },
+                "description": "Selects 1 enemy target within <hl>6 tiles</hl> and deals physical damage equal to <hl>80%</hl> of attack to them.",
+                "quote": "Play a melody of triumph.",
+                "image_overwrite": "assault_rifle"
+            },
+            "skill_1": {
+                "name": "absolute_tuning",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 1,
+                    "stability_damage": 2
+                },
+                "description": "Selects 1 enemy target within <hl>6 tiles</hl>, cleanses <hl>1</hl> buff, and deals physical damage equal to <hl>150%</hl> of attack to them.",
+                "quote": "The strength of thousands, woven into one powerful melody.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "If the target has no buffs to cleanse when during the attack, gain 1 stack of Tuning after the attack."
+                    }
+                ]
+            },
+            "skill_2": {
+                "name": "qing_shang_harmony",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 4,
+                    "stability_damage": 0
+                },
+                "description": "Gains <hl>3 stacks</hl> of <ef>Tuning</ef>, as well as <ef>Pitch Perfect</ef> for <hl>1 turn</hl>. Gains <hl>1 instance</hl> of <ef>Extra Command</ef>.",
+                "quote": "Why not take this chance to play one more melody?",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "Increases the number of Tuning stacks gained by 3."
+                    }
+                ]
+            },
+            "ultimate": {
+                "name": "ethereal_resonance",
+                "stats": {
+                    "cooldown": 6,
+                    "confectance_points": 0,
+                    "stability_damage": 2
+                },
+                "description": "Selects 1 enemy target within <hl>6 tiles</hl>, dealing Physical damage equal to <hl>190%</hl> of attack. For every <hl>1 stack</hl> of <ef>Tuning</ef>, reduces this skill's cooldownn by <hl>1 turn</hl>. After attacking, consumes all stacks of <ef>Tuning</ef> and gains <hl>1 stack</hl> of <ef>Tuning</ef> permanently, up to a maximum of <hl>3 stacks</hl>.",
+                "quote": "This melody is most exquisite, but its message has to be clear.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "Increase the stack limit of permanent Tuning by 3 stacks."
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "Increase the stack limit of permanent Tuning by 3 stacks. For every 1 enemy unit that dies on the field, gain 1 stack of Tuning permanently."
+                    }
+                ]
+            },
+            "passive": {
+                "name": "swift_harmony",
+                "stats": {
+                    "cooldown": 0,
+                    "confectance_points": 0,
+                    "stability_damage": 0
+                },
+                "description": "At the start of the action, gains <hl>1 point</hl> of Confectance Index and <hl>1 stack</hl> of <ef>Tuning</ef>. When performing an active attack against a target not protected by Cover, gains <hl>1 point</hl> of Confectance Index. Before taking targeted damage, if the number of <ef>Tuning</ef> stacks is greater than <hl>2</hl>, launches <ef>Interception</ef>, dealing light ammo Physical damage equal to <hl>150%</hl> of attack and <hl>4 points</hl> of stability damage, and permanently gains <hl>1 stack</hl> of <ef>Tuning</ef>. This can be triggered <hl>once</hl> per turn. If the number of <ef>Tuning</ef> stacks is greater than <hl>3</hl>, increases damage dealt by <hl>20%</hl>.",
+                "quote": "As the zither strings resonate, they never lose the rhythm.",
+                "levels": [
+                    {
+                        "fortification": 0
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "If the number of Tuning stacks is greater than 5, increases damage dealt by 40% instead, and stability damage dealt to the attacker before taking targeted damage increases by 2 points. The initial damage multiplier increases by 30%."
+                    },
+                    {
+                        "fortification": 0,
+                        "description": "If the number of Tuning stacks is greater than 5, increases damage dealt by 40% instead, and stability damage dealt to the attacker before taking targeted damage increases by 2 points. The initial damage multiplier increases by 30%. When the number of permanent Tuning stacks reaches max, ignores 15% of Cover damage reduction when attacking Exposed enemies."
+                    }
+                ]
+            }
+        },
+        "nodes": [
+            {
+                "keys": [
+                    {
+                        "name": "Echoing Melody",
+                        "type": "fixed",
+                        "description": "When Daiyan has <ef>Tuning</ef>, increases mobility by <hl>1 tile</hl>."
+                    },
+                    {
+                        "name": "Unfulfilled Dreams",
+                        "type": "fixed",
+                        "description": "Gains <hl>3 points</hl> of Confectance Index at the start of the battle."
+                    }
+                ],
+                "level": 20
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Hazewalker's Melody",
+                        "type": "fixed",
+                        "description": "For <hl>each point</hl> of additional mobility before the attack, critical rate increases by <hl>10%</hl>."
+                    },
+                    {
+                        "name": "Serene Serenade",
+                        "type": "fixed",
+                        "description": "If Daiyan's mobility is higher than the target's, gains <hl>1 stack</hl> of <ef>Tuning</ef> before using an active attack."
+                    }
+                ],
+                "level": 30
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Squad Broken",
+                        "type": "fixed",
+                        "description": "For every <hl>3 stacks</hl> of <ef>Tuning</ef>, cleanses <hl>1</hl> additional buff when using the active skill <hl>Absolute Tuning</hl>."
+                    },
+                    {
+                        "name": "Lasting Legacy",
+                        "type": "fixed",
+                        "description": "After using <hl>Qing Shang Harmony</hl>, if a kill occurs in this turn, recovers <hl>20%</hl> max HP and <hl>2 points</hl> of stability index."
+                    }
+                ],
+                "level": 40
+            },
+            {
+                "keys": [
+                    {
+                        "name": "Shattering Stone and Silk",
+                        "type": "common",
+                        "description": "Crit Rate +5.0%<br>At the start of the action, gains <ef>Movement Up I</ef> for <hl>1 turn</hl>. This has a cooldown of <hl>1 turn</hl>."
+                    }
+                ],
+                "level": 40
+            }
+        ]
     }
 }

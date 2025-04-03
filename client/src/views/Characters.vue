@@ -40,7 +40,7 @@
     export default {
         data() {
             return {
-                completed: ["makiatto", "klukai", "centaureissi"],
+                completed: ["makiatto", "klukai", "centaureissi", "daiyan"],
                 characters: [],
                 displayed: [],
                 search: "",

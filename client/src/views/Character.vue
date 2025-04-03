@@ -1,7 +1,7 @@
 <template>
     <div v-if="character" class="gacha-main flex items-center justify-center pt-10 px-[4%] sm:px-0">
         <div class="flex flex-wrap gap-8 w-full sm:justify-center">
-            <div class="flex sm:w-full gap-8 sm:flex-col ">
+            <div class="flex sm:w-full gap-8 sm:flex-col">
                 <div class="character-container sm:w-full min-w-64 w-64 flex justify-center">
                     <div class="absolute z-10 top-2 sm:-translate-x-1/2 sm:left-1/2 sm:!top-[90%] translate-x-3/4 w-72 h-14">
                         <div class="capitalize w-full h-full absolute flex z-10 justify-center items-center gap-1">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="flex flex-col sm:w-full gap-2 pt-[4.7rem] sm:pt-0">
                     <div class="flex gap-2 flex-wrap sm:justify-center">
-                        <p v-for="title of ['role', 'element', 'weapon', 'affiliation']" class="bg-secondary p-1 w-max px-2 capitalize inline-image"><img v-if="!(title == 'affiliation' || title == 'weapon')" :src="`/icons/${character[title]}.webp`" alt="">{{ title == 'weapon' ? character[title].toUpperCase() : character[title] }}</p>
+                        <p v-for="title of ['role', 'element', 'weapon', 'affiliation']" :class="character[title] ? '' : 'invisible !p-0'" class="bg-secondary p-1 w-max px-2 capitalize inline-image"><img v-if="!(title == 'affiliation' || title == 'weapon')" :src="`/icons/${character[title]}.webp`" alt="">{{ title == 'weapon' ? character[title].toUpperCase() : character[title] }}</p>
                     </div>
                     <div class="main-container sm:max-w-none max-w-[33.4rem] sm:w-full min-h-[5.3rem] p-2 h-auto flex items-center"><p>{{ character.description }}</p></div>
                     <div class="main-container sm:max-w-none max-w-[33.4rem] sm:w-full flex-col">
@@ -152,7 +152,7 @@
             if (characterName && characters[characterName]) {
                 this.character = characters[characterName]
             } else {
-                //this.$router.push({ path: "/characters" })
+                this.$router.push({ path: "/characters" })
             }
         }
     }
