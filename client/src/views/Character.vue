@@ -114,8 +114,6 @@
 </template>
 
 <script>
-    const characters = await fetch("/characters.json").then(response => response.json())
-    
     /*
     for (const character of Object.values(characters)) {
         for (const skill of Object.values(character.skills)) {
@@ -146,7 +144,8 @@
                 return description
             }
         },
-        mounted() {
+        async mounted() {
+            const characters = await fetch("/characters.json").then(response => response.json())
             const characterName = this.$route.params.name
 
             if (characterName && characters[characterName]) {
