@@ -701,6 +701,14 @@
         "type": "ar"
     },
     {
+        "name": "ump9",
+        "displayName": "UMP9",
+        "id": 10132,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "smg"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
@@ -851,5 +859,20 @@
         "item": "weapon",
         "rarity": "r",
         "type": "rf"
+    },
+    {
+        "name": "retured_pluma_edge",
+        "id": 10371,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "bld"
+    },
+    {
+        "name": "retired_ump9",
+        "displayName": "Retired UMP9",
+        "id": 10131,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "smg"
     }
 ]

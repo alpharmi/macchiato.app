@@ -194,7 +194,7 @@
                         const attainable = this.findAttainableById(pull[0]) || {name: "unknown", displayName: `Unknown-${pull[0]}`, item: "character", rarity: "r"}
 
                         if (attainable.name == "unknown") {
-                            //fetch(`https://macchiatogfl.vercel.app/api/logImport?id=${pull[0]}`)
+                            fetch(`https://macchiatogfl.vercel.app/api/logImport?id=${pull[0]}`)
                         }
 
                         const pullFormatted = [
