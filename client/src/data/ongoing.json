@@ -1,9 +1,9 @@
 {
     "banners": [
-        {"name": "klukai", "id": 3, "type": "character"},
-        {"name": "skylla", "id": 4, "type": "weapon"},
-        {"name": "makiatto", "type": "character"},
-        {"name": "bittersweet_caramel", "type": "weapon"},
+        {"name": "mechty", "id": 3, "type": "character"},
+        {"name": "daydream", "id": 4, "type": "weapon"},
+        {"name": "daiyan", "type": "character"},
+        {"name": "heavy_strings", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}
     ]
 }

@@ -263,10 +263,10 @@
                             }
 
                             if (success) {
-                                await fetch("https://macchiatogfl.vercel.app/api/logImport?" + new URLSearchParams({
+                                /*await fetch("https://macchiatogfl.vercel.app/api/logImport?" + new URLSearchParams({
                                     "uid": gachaData.uid,
                                     "method": gachaData.method
-                                })) //will probably go in the future, just want to log if things are working at the start.
+                                }))*/ //will probably go in the future, just want to log if things are working at the start.
                                 /*setInterval(() => {
                                     this.redirect("/gacha")
                                 }, 1000);*/

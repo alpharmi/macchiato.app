@@ -134,7 +134,7 @@
         "element": "corrosion",
         "weapon": "ar",
         "role": "support",
-        "roleDescriptions": ["", "", ""]
+        "roleDescriptions": ["damage_buff", "tile", "basic_attack_enhancement"]
     },
     {
         "name": "nikketa",
@@ -423,6 +423,13 @@
     },
     {
         "name": "skylla",
+        "id": 10523,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "ar"
+    },
+    {
+        "name": "daydream",
         "id": 10523,
         "item": "weapon",
         "rarity": "ssr",

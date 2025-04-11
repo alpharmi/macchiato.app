@@ -190,8 +190,14 @@
                     const formattedBanner = formatted[bannerType]
                     var guaranteed = false
 
+                    banner.pulls.push([128392389238, "test"])
+
                     for (const pull of banner.pulls.reverse()) {
-                        const attainable = this.findAttainableById(pull[0]) || {name: `unknown`, displayName: `Unknown-${pull[0]}`, item: "character", rarity: "r"}
+                        const attainable = this.findAttainableById(pull[0]) || {name: "unknown", displayName: `Unknown-${pull[0]}`, item: "character", rarity: "r"}
+
+                        if (attainable.name == "unknown") {
+                            fetch(`https://macchiatogfl.vercel.app/api/logImport?id=${pull[0]}`)
+                        }
 
                         const pullFormatted = [
                             new Date(pull[1] * 1000).toLocaleDateString([], { hour: "2-digit", minute: "2-digit" }).replace(",", " "),

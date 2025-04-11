@@ -10,7 +10,7 @@
                         </div>
                         <img :class="character.name.length > 8 ? 'scale-x-125' : ''" class="absolute w-full h-full drop-shadow-lg" src="/calculated_background.webp" alt="">
                     </div>
-                    <img class="px-5 h-full object-cover" :src="`/charactersFull/${character.name}_small.webp`" :alt="character.name">
+                    <img class="px-0 h-full object-cover max-h-[21rem]" :src="`/charactersFull/${character.name}_small.webp`" :alt="character.name">
                 </div>
                 <div class="flex flex-col sm:w-full gap-2 pt-[4.7rem] sm:pt-0">
                     <div class="flex gap-2 flex-wrap sm:justify-center">
