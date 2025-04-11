@@ -190,8 +190,6 @@
                     const formattedBanner = formatted[bannerType]
                     var guaranteed = false
 
-                    banner.pulls.push([128392389238, "test"])
-
                     for (const pull of banner.pulls.reverse()) {
                         const attainable = this.findAttainableById(pull[0]) || {name: "unknown", displayName: `Unknown-${pull[0]}`, item: "character", rarity: "r"}
 
