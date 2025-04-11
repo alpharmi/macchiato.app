@@ -716,6 +716,14 @@
         "type": "ar"
     },
     {
+        "name": "ksvk",
+        "displayName": "KSVK",
+        "id": 10232,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "rf"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
@@ -888,5 +896,13 @@
         "item": "weapon",
         "rarity": "r",
         "type": "ar"
+    },
+    {
+        "name": "retired_ksvk",
+        "displayName": "Retired KSVK",
+        "id": 10231,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "rf"
     }
 ]
