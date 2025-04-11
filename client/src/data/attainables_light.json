@@ -709,6 +709,13 @@
         "type": "smg"
     },
     {
+        "name": "g11",
+        "id": -1,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
@@ -872,7 +879,14 @@
         "displayName": "Retired UMP9",
         "id": 10131,
         "item": "weapon",
-        "rarity": "sr",
+        "rarity": "r",
         "type": "smg"
+    },
+    {
+        "name": "retired_g11",
+        "id": 10511,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "ar"
     }
 ]
