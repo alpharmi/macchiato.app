@@ -128,7 +128,7 @@
     },
     {
         "name": "mechty",
-        "id": -1,
+        "id": 1051,
         "item": "character",
         "rarity": "ssr",
         "element": "corrosion",
@@ -430,7 +430,7 @@
     },
     {
         "name": "daydream",
-        "id": 10523,
+        "id": -1,
         "item": "weapon",
         "rarity": "ssr",
         "type": "ar"
