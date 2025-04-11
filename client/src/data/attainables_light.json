@@ -724,6 +724,13 @@
         "type": "rf"
     },
     {
+        "name": "g11",
+        "id": 10512,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "ar"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
