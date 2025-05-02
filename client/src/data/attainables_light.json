@@ -194,7 +194,7 @@
         "element": "burn",
         "weapon": "smg",
         "role": "support",
-        "roleDescriptions": ["", "", ""]
+        "roleDescriptions": ["fixed_damage", "tile", "buff"]
     },
     {
         "name": "yoohee",
@@ -427,6 +427,13 @@
         "item": "weapon",
         "rarity": "ssr",
         "type": "ar"
+    },
+    {
+        "name": "banshee's_whisper",
+        "id": -1,
+        "item": "weapon",
+        "rarity": "ssr",
+        "type": "smg"
     },
     {
         "name": "daydream",
@@ -731,6 +738,13 @@
         "type": "ar"
     },
     {
+        "name": "vector",
+        "id": -1,
+        "item": "weapon",
+        "rarity": "sr",
+        "type": "smg"
+    },
+    {
         "name": "retired_type_95",
         "id": 11051,
         "item": "weapon",
@@ -911,5 +925,12 @@
         "item": "weapon",
         "rarity": "r",
         "type": "rf"
+    },
+    {
+        "name": "retired_vector",
+        "id": -1,
+        "item": "weapon",
+        "rarity": "r",
+        "type": "smg"
     }
 ]

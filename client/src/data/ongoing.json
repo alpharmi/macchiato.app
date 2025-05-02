@@ -1,9 +1,9 @@
 {
     "banners": [
-        {"name": "mechty", "id": 3, "type": "character"},
-        {"name": "daydream", "id": 4, "type": "weapon"},
-        {"name": "daiyan", "type": "character"},
-        {"name": "heavy_strings", "type": "weapon"},
+        {"name": "vector", "id": 3, "type": "character"},
+        {"name": "banshee's_whisper", "id": 4, "type": "weapon"},
+        {"name": "dushevnaya", "type": "character"},
+        {"name": "eulogistic_verse", "type": "weapon"},
         {"name": "standard", "id": 1, "type": "standard"}
     ]
 }
