@@ -188,7 +188,7 @@
     },
     {
         "name": "vector",
-        "id": -1,
+        "id": 1044,
         "item": "character",
         "rarity": "ssr",
         "element": "burn",
@@ -430,7 +430,7 @@
     },
     {
         "name": "banshee's_whisper",
-        "id": -1,
+        "id": 10443,
         "item": "weapon",
         "rarity": "ssr",
         "type": "smg"
@@ -739,7 +739,7 @@
     },
     {
         "name": "vector",
-        "id": -1,
+        "id": 10442,
         "item": "weapon",
         "rarity": "sr",
         "type": "smg"
@@ -928,7 +928,7 @@
     },
     {
         "name": "retired_vector",
-        "id": -1,
+        "id": 10441,
         "item": "weapon",
         "rarity": "r",
         "type": "smg"
